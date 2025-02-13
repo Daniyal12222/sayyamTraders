@@ -3,6 +3,6 @@ import Link from "next/link";
 import Login from "./login/page";
 export default function Home() {
   return (
-   <Login />
+   <div><h1>main page</h1></div>
   );
 }

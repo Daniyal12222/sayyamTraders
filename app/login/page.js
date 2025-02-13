@@ -6,7 +6,7 @@ export default function Login() {
     <div className="w-full h-[100vh] flex justify-center items-center bg-g\ ">
       <div className="w-[40%] h-[50vh] shadow-lg   flex flex-col justify-around items-center">
 
-        <p className="text-neutral-700">Please enter your login details</p>
+        <p className="text-neutral-500 text-sm">Please enter your login details</p>
 
         <form  className="flex flex-col justify-center items-center gap-3  w-[80%] " >
           <input type="email" placeholder="Email"  className="w-[70%] border  px-4 py-2 focus:outline-none focus:border-yellow-400 border-s-2 border-s-yellow-400 rounded" required   />
