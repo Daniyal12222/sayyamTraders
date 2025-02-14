@@ -1,6 +1,7 @@
 "use client";
 import { IoSettingsSharp } from "react-icons/io5";
 import { TiPlus } from "react-icons/ti";
+import Link from "next/link";
 
 export default function Sources() {
 
@@ -73,7 +74,7 @@ export default function Sources() {
                 </table>
 
             </div>
-<button className="w-[6%] h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 " ><TiPlus /> </button>
+            <Link href={"/dashboard/sources/sourcesD"} className="w-[6%] h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 " ><TiPlus /> </Link>
 
         </div>
     )
