@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft } from "react-icons/hi";
 
+
 export default function Settings() {
+ 
     return (
         <div className="w-full h-[100vh] flex justify-center items-center  ">
             <div className="w-[40%] h-[50vh] shadow-lg  flex flex-col justify-evenly items-center relative border">
@@ -22,7 +24,7 @@ export default function Settings() {
                     <p className="text-center text-sm text-neutral-500">daniyal@gmail.com</p>
                 </div>
 
-                <button className="w-[60%] px-4 py-3 text-sm text-black bg-s-orange-300 rounded hover:bg-s-yellow-400 font-semibold bg-yellow-400 ">Change password</button>
+                <Link href={"../changPassword"} className="w-[60%] px-4 py-3 text-sm text-black bg-s-orange-300 text-center hover:bg-s-yellow-400 font-semibold bg-yellow-400 ">Change password</Link>
 
 
             </div>
