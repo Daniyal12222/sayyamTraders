@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Sources() {
 
     return (
-        <div className="w-full h-full flex flex-col overflow-y-auto  relative">
+        <div className="w-full h-full flex flex-col overflow-y-auto  relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center ">
                 <button className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</button>
@@ -14,7 +14,7 @@ export default function Sources() {
             {/* heading */}
             <div className="w-full mt-5 flex justify-between">
                 <h1 className="font-bold text-3xl">Sources</h1>
-                <button className="w-[15vw] rounded bg-stone-600 text-white px-3 py-1" >release money</button>
+                <Link href={"./sources/releaseMoney"} className="w-[15vw] rounded bg-stone-600 text-center text-white px-3 py-1" >Release money</Link>
             </div>
             {/* dropdown */}
             <div className="w-full flex  gap-2 pt-2 mt-4">
@@ -39,7 +39,7 @@ export default function Sources() {
             <div className="w-full overflow-y-auto mt-8  ">
                 <table className=" w-full " >
                     <thead>
-                        <tr className="border text-center px-3 py-2 h-[8vh]">
+                        <tr className="border text-center px-3 py-2 h-[8vh] bg-white">
                             <th>S#</th>
                             <th>Name</th>
                             <th>CONTACT PERSON</th>
@@ -51,7 +51,7 @@ export default function Sources() {
                     </thead>
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
+                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] bg-white">
                             <td>01</td>
                             <td>John Doe</td>
                             <td>Jameel Ahmad</td>
@@ -60,7 +60,7 @@ export default function Sources() {
                             <td>100,775</td>
                             <td>128,754</td>
                         </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh]">
+                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] bg-white">
                             <td>02</td>
                             <td>John Doe</td>
                             <td>Jameel Ahmad</td>

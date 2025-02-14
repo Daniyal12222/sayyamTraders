@@ -45,7 +45,7 @@ export default function Dashboard() {
             <div className="w-full overflow-y-auto mt-8  ">
                 <table className=" w-full " >
                     <thead>
-                        <tr className="border text-center px-3 py-2 h-[8vh]">
+                        <tr className="border text-center px-3 py-2 h-[8vh] bg-white">
                             <th>S#</th>
                             <th>Name</th>
                             <th>Vehicle</th>
@@ -57,7 +57,7 @@ export default function Dashboard() {
                     </thead>
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
+                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] bg-white">
                             <td>01</td>
                             <td>John Doe</td>
                             <td>Toyota Camry</td>
@@ -66,7 +66,7 @@ export default function Dashboard() {
                             <td>Payment Succeeded</td>
                             <td><button className="px-2 py-1 text-sm text-gray-600 hover:text-gray-900">View</button></td>
                         </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh]">
+                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] bg-white">
                             <td>02</td>
                             <td>John Doe</td>
                             <td>Toyota Camry</td>
