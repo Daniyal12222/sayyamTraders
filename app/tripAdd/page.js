@@ -1,27 +1,7 @@
-"use client";
-import { useState } from 'react';
+
 
 export default function AddTripForm() {
-    //   const [formData, setFormData] = useState({
-    //     name: '',
-    //     source: '',
-    //     transporter: '',
-    //     date: '',
-    //     truck: '',
-    //     weight: '',
-    //     price: '',
-    //     ashCost: '',
-    //   });
-
-    //   const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData({ ...formData, [name]: value });
-    //   };
-
-    //   const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log('Form submitted:', formData);
-    //   };
+  
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
