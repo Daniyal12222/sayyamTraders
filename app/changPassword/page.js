@@ -14,7 +14,6 @@ export default function Login() {
           <input type="password" placeholder="New Password" className="w-[70%] border px-4 py-1  focus:outline-none focus:border-yellow-400 border-s-2 border-s-yellow-400  " required  />
           <input type="password" placeholder="Repeat Password" className="w-[70%] border px-4 py-1  focus:outline-none focus:border-yellow-400 border-s-2 border-s-yellow-400  " required  />
           <button type="submit" className="w-[70%] px-4 py-3 text-sm text-black bg-s-orange-300 rounded hover:bg-s-yellow-400 font-semibold bg-yellow-400 mt-3">Save changes</button>
-          
         </form>
       </div>
     </div>
