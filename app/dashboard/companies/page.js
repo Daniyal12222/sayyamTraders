@@ -8,7 +8,7 @@ export default function Companies() {
         <div className="w-full h-full flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center">
-                <button className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</button>
+                <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>
             </div>
             {/* heading */}
             <div className="w-full mt-5 flex justify-between">
@@ -36,9 +36,9 @@ export default function Companies() {
             </div>
             {/* table */}
             <div className="w-full overflow-y-auto mt-8  ">
-                <table className=" w-full " >
+                <table className=" w-full rounded " >
                     <thead>
-                        <tr className="border text-center px-3 py-2 h-[8vh]">
+                        <tr className="border text-center px-3 bg-white py-2 h-[8vh]">
                             <th>S#</th>
                             <th>NAME</th>
                             <th>LOCATION</th>
@@ -49,53 +49,56 @@ export default function Companies() {
                             <th>CONTACT</th>
                             <th>LAST TRIP</th>
                         </tr>
-                    </thead>
+                    </thead >
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
-                            <td>01</td>
-                            <td>abd</td>
-                            <td>KHI</td>
-                            <td>2346</td>
-                            <td>100,775</td>
-                            <td>128,754</td>
-                            <td>123</td>
-                            <td>Jamal Ahmed</td>
-                            <td>ABC</td>
+                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh] ">
+                            <td className="px-3 py-2">01</td>
+                            <td className="px-3 py-2">abd</td>
+                            <td className="px-3 py-2">KHI</td>
+                            <td className="px-3 py-2">2346</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">128,754</td>
+                            <td className="px-3 py-2">123</td>
+                            <td className="px-3 py-2">Jamal Ahmed</td>
+                            <td className="px-3 py-2">ABC</td>
                         </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
-                            <td>01</td>
-                            <td>abd</td>
-                            <td>KHI</td>
-                            <td>2346</td>
-                            <td>100,775</td>
-                            <td>128,754</td>
-                            <td>123</td>
-                            <td>Jamal Ahmed</td>
-                            <td>ABC</td>
+                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh] ">
+                            <td className="px-3 py-2">02</td>
+                            <td className="px-3 py-2">abd</td>
+                            <td className="px-3 py-2">KHI</td>
+                            <td className="px-3 py-2">2346</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">128,754</td>
+                            <td className="px-3 py-2">123</td>
+                            <td className="px-3 py-2">Jamal Ahmed</td>
+                            <td className="px-3 py-2">ABC</td>
                         </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
-                            <td>01</td>
-                            <td>abd</td>
-                            <td>KHI</td>
-                            <td>2346</td>
-                            <td>100,775</td>
-                            <td>128,754</td>
-                            <td>123</td>
-                            <td>Jamal Ahmed</td>
-                            <td>ABC</td>
+                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh] ">
+                            <td className="px-3 py-2">03</td>
+                            <td className="px-3 py-2">abd</td>
+                            <td className="px-3 py-2">KHI</td>
+                            <td className="px-3 py-2">2346</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">128,754</td>
+                            <td className="px-3 py-2">123</td>
+                            <td className="px-3 py-2">Jamal Ahmed</td>
+                            <td className="px-3 py-2">ABC</td>
                         </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
-                            <td>01</td>
-                            <td>abd</td>
-                            <td>KHI</td>
-                            <td>2346</td>
-                            <td>100,775</td>
-                            <td>128,754</td>
-                            <td>123</td>
-                            <td>Jamal Ahmed</td>
-                            <td>ABC</td>
+                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh] ">
+                            <td className="px-3 py-2">04</td>
+                            <td className="px-3 py-2">abd</td>
+                            <td className="px-3 py-2">KHI</td>
+                            <td className="px-3 py-2">2346</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">128,754</td>
+                            <td className="px-3 py-2">123</td>
+                            <td className="px-3 py-2">Jamal Ahmed</td>
+                            <td className="px-3 py-2">ABC</td>
                         </tr >
+                        
+                        
+                        
                         
                     </tbody>
 

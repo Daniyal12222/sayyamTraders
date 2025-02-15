@@ -1,13 +1,19 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 export default function Sidebar() {
 
     return(
-        <div className="w-[20vw] h-[100vh] bg-yellow-400 flex flex-col">
+        <div className="w-[20vw] h-[100vh]  flex flex-col " style={{backgroundColor :"#fcb80d"}}>
 
-            <div className="w-full h-[20vh] flex flex-col justify-center md:ps-14 ">
-                <h1 className="text-3xl font-bold text-black font-sans">SAYYAM</h1>
-                <p className="text-neutral-700 text-md  font-thin">International Trader</p>
+            <div className="w-full h-[20vh] flex flex-col justify-center mt-10 md:ps-14 ">
+                <Image
+                src={require("./../../public/sideIcon.png")}
+                alt="Sayyam International Trader"
+                width={150}
+                height={150}
+                className="mb-5"  />
+                
             </div>
             
             <div className="w-full h-[80vh] flex flex-col justify-center md:ps-14  gap-3 overflow-y-auto">

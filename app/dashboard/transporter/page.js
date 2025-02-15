@@ -8,7 +8,7 @@ export default function Transporter() {
         <div className="w-full h-full flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center">
-                <button className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</button>
+                <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>
             </div>
             {/* heading */}
             <div className="w-full mt-5 flex justify-between">
@@ -38,7 +38,7 @@ export default function Transporter() {
             <div className="w-full overflow-y-auto mt-8  ">
                 <table className=" w-full " >
                     <thead>
-                        <tr className="border text-center px-3 py-2 h-[8vh]">
+                        <tr className="border text-center px-3 py-2 bg-white h-[8vh]">
                             <th>S#</th>
                             <th>NAME</th>
                             <th>CONTACT PERSON</th>
@@ -50,23 +50,23 @@ export default function Transporter() {
                     </thead>
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] ">
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td>Jameel Ahmad</td>
-                            <td>03462142135</td>
-                            <td>88,345</td>
-                            <td>100,775</td>
-                            <td>128,754</td>
-                        </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh]">
-                            <td>02</td>
-                            <td>John Doe</td>
-                            <td>Jameel Ahmad</td>
-                            <td>03462142135</td>
-                            <td>88,345</td>
-                            <td>100,775</td>
-                            <td>128,754</td>
+                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                            <td className="px-3 py-2">02</td>
+                            <td className="px-3 py-2">John Doe</td>
+                            <td className="px-3 py-2">Jameel Ahmad</td>
+                            <td className="px-3 py-2">03462142135</td>
+                            <td className="px-3 py-2">88,345</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">128,754</td>
+                        </tr>
+                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                            <td className="px-3 py-2">02</td>
+                            <td className="px-3 py-2">John Doe</td>
+                            <td className="px-3 py-2">Jameel Ahmad</td>
+                            <td className="px-3 py-2">03462142135</td>
+                            <td className="px-3 py-2">88,345</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">128,754</td>
                         </tr>
                     </tbody>
 
