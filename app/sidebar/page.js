@@ -1,40 +1,47 @@
-"use client"
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Sidebar() {
+  const pathname = usePathname();
 
-    return(
-        <div className="w-[20vw] h-[100vh]  flex flex-col " style={{backgroundColor :"#fcb80d"}}>
+  const links = [
+    { name: "Trips", path: "/dashboard" },
+    { name: "Sources", path: "/dashboard/sources" },
+    { name: "Transporter", path: "/dashboard/transporter" },
+    { name: "Companies", path: "/dashboard/companies" },
+    { name: "Log out", path: "/login" },
+  ];
 
-            <div className="w-full h-[20vh] flex flex-col justify-center mt-10 md:ps-14 ">
-                <Image
-                src={require("./../../public/sideIcon.png")}
-                alt="Sayyam International Trader"
-                width={150}
-                height={150}
-                className="mb-5"  />
-                
-            </div>
-            
-            <div className="w-full h-[80vh] flex flex-col justify-center md:ps-14  gap-3 overflow-y-auto">
+  return (
+    <div className="w-[20vw] h-[100vh] flex flex-col" style={{ backgroundColor: "#fcb80d" }}>
+      {/* Logo Section */}
+      <div className="w-full h-[20vh] flex flex-col justify-center mt-10 md:ps-14">
+        <Image
+          src={require("./../../public/sideIcon.png")}
+          alt="Sayyam International Trader"
+          width={150}
+          height={150}
+          className="mb-5"
+        />
+      </div>
 
-                <Link href={"/dashboard"} className=" active:font-semibold hover:text-lg hover:font-semibold">
-                Trips
-                </Link>
-                <Link href={"/dashboard/sources"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
-                Sources
-                </Link>
-                <Link href={"/dashboard/transporter"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
-                Transporter
-                </Link>
-                <Link href={"/dashboard/companies"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
-                Companies
-                </Link>
-                <Link href={"/login"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
-                Log out
-                </Link>
-            </div>
-            
-        </div>
-    )
+      {/* Links Section */}
+      <div className="w-full h-[80vh] flex flex-col justify-start md:ps-14 gap-3 overflow-y-auto">
+        {links.map((link) => (
+          <Link
+            key={link.path}
+            href={link.path}
+            className={` hover:font-semibold ${
+              pathname === link.path ? "font-bold text-black" : "font-normal text-gray-800"
+            }`}
+          >
+            {link.name}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }
