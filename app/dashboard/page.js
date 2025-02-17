@@ -43,7 +43,7 @@ export default function Dashboard() {
                 </select>
             </div>
             {/* table */}
-            <div className="w-full overflow-y-auto mt-8  ">
+            <div className="w-full border overflow-y-auto mt-8 rounded ">
                 <table className=" w-full " >
                     <thead>
                         <tr className="border text-center px-3 py-2 h-[8vh] bg-white">

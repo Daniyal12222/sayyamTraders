@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 
 export default function ForgotPassword() {
+    const router = useRouter();
     return (
         <div className="w-full h-[100vh] flex justify-center items-center flex-col " style={{ backgroundColor: "#f5f5f5" }}>
             <div className=" w-[40%]">
@@ -18,7 +20,7 @@ export default function ForgotPassword() {
                     className="mb-5" />
             </div>
             <div className="w-[40%] h-[50vh] shadow-lg  flex flex-col justify-evenly items-center bg-white relative">
-                <button className=" absolute left-8 top-9 text-xl "><HiArrowLeft /></button>
+                <button onClick={()=>router.back()} className=" absolute left-8 top-9 text-xl "><HiArrowLeft /></button>
 
 
                 <div className="w-[60%] ">
