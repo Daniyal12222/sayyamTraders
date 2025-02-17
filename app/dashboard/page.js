@@ -1,10 +1,12 @@
 "use client";
 import { IoSettingsSharp } from "react-icons/io5";
 import Link from "next/link";
+import { TiPlus } from "react-icons/ti";
+
 export default function Dashboard() {
 
     return (
-        <div className="w-full h-full flex flex-col overflow-y-auto ">
+        <div className="w-full h-full flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center">
                 <Link href={"../../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>
@@ -46,7 +48,7 @@ export default function Dashboard() {
             <div className="w-full border overflow-y-auto mt-8 rounded ">
                 <table className=" w-full " >
                     <thead>
-                        <tr className="border text-center px-3 py-2 h-[8vh] bg-white">
+                        <tr className="border text-center px-5 py-2 h-[8vh] bg-white ">
                             <th>S#</th>
                             <th>Name</th>
                             <th>Vehicle</th>
@@ -58,7 +60,7 @@ export default function Dashboard() {
                     </thead>
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] bg-white">
+                        <tr className="border text-center px-5 py-4 text-neutral-600 h-[6vh] bg-white">
                             <td>01</td>
                             <td>John Doe</td>
                             <td>Toyota Camry</td>
@@ -67,7 +69,7 @@ export default function Dashboard() {
                             <td>Payment Succeeded</td>
                             <td><button className="px-2 py-1 text-sm text-gray-600 hover:text-gray-900">View</button></td>
                         </tr >
-                        <tr className="border text-center px-3 py-4 text-neutral-600 h-[6vh] bg-white">
+                        <tr className="border text-center px-5 py-4 text-neutral-600 h-[6vh] bg-white">
                             <td>02</td>
                             <td>John Doe</td>
                             <td>Toyota Camry</td>
@@ -81,6 +83,8 @@ export default function Dashboard() {
                 </table>
                         
             </div>
+            <Link href={"/dashboard/tripAdd"} className="w-[6%] h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold " ><TiPlus /> </Link>
+
 
         </div>
     )
