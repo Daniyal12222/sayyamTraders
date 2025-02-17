@@ -79,7 +79,7 @@ export default function CompanyDashboard() {
               <th>SOURSCE</th>
               <th>TRANSPORTER</th>
               <th>COST</th>
-              <th><div className="w-8 h-8 rounded-full shadow-lg flex justify-center items-center">+</div></th>
+              <th><button onClick={()=> router.push("./newCost")} className="w-8 h-8 rounded-full shadow-lg flex justify-center items-center">+</button></th>
             </tr>
           </thead>
           <tbody>

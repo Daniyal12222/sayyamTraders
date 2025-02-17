@@ -2,7 +2,7 @@
 
 export default function EditTrip() {
     return (
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full h-full flex justify-center items-center">
 
             <div className="p-6 bg-white  shadow-lg w-[50%]">
                 <h2 className="text-xl font-bold mb-4 text-center">Edit Trip</h2>

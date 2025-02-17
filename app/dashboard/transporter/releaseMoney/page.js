@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function Release() {
     const router = useRouter();
     return (
-        <div className=" w-full flex justify-center items-center ">
+        <div className=" w-full h-full flex justify-center items-center ">
 
         <div className="p-6 bg-white  w-[50%] shadow-md relative">
 <button onClick={()=> router.back()} className=" absolute left-8 top-8 "><HiArrowLeft /></button>

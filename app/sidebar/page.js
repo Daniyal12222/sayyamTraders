@@ -30,7 +30,7 @@ export default function Sidebar() {
                 <Link href={"/dashboard/companies"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
                 Companies
                 </Link>
-                <Link href={"#"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
+                <Link href={"/login"}  className=" active:font-semibold hover:text-lg hover:font-semibold">
                 Log out
                 </Link>
             </div>

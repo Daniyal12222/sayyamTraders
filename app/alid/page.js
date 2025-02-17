@@ -1,19 +1,21 @@
-import React from 'react';
-import { Card } from "@/components/ui/card";
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function BillingSummary() {
- 
-
+    const router = useRouter();
   return (
     <div className="px-32 py-6 bg-gray-100 min-h-screen">
       <div className="flex items-center justify-between space-x-4  mb-4">
-        <div className='flex gap-4'>
+        <button onClick={()=> router.back()} className='flex gap-4'>
         <ArrowLeft className="cursor-pointer" />
-        <h1 className="text-2xl font-bold">Allied - 13th Aug-2021</h1>
-        </div>
+        </button>
         <Button variant="default" className="ml-auto bg-yellow-400 text-black">EDIT DETAILS</Button>
+      </div>
+      <div className='w-full mb-3'>
+        <h1 className="text-2xl font-bold">Allied - 13th Aug-2021</h1>
+
       </div>
 
       <div className="border rounded-lg p-4  bg-white mb-4">
