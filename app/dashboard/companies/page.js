@@ -2,7 +2,9 @@
 import { IoSettingsSharp } from "react-icons/io5";
 import { TiPlus } from "react-icons/ti";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 export default function Companies() {
+    const router = useRouter();
 
     return (
         <div className="w-full h-full flex flex-col overflow-y-auto relative ">
@@ -13,7 +15,7 @@ export default function Companies() {
             {/* heading */}
             <div className="w-full mt-5 flex justify-between">
                 <h1 className="font-bold text-3xl">Companies</h1>
-                <button className="w-[15vw] rounded bg-stone-600 text-white px-3 py-1" >release money</button>
+                <button onClick={()=>router.push("./companies/companiBill")} className="w-[15vw] rounded bg-stone-600 text-white px-3 py-1" >release money</button>
             </div>
             {/* dropdown */}
             <div className="w-full flex  gap-2 pt-2 mt-4">

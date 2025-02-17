@@ -1,8 +1,10 @@
 "use client";
 import { HiArrowLeft } from "react-icons/hi";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Release() {
+    const [selected, setSelected] = useState(false);
     const router = useRouter();
     return (
         <div className=" w-full h-full flex justify-center items-center ">
@@ -27,7 +29,7 @@ export default function Release() {
                     {/* 1 */}
                     <div className="flex items-center space-x-2 mb-3">
                         <label className="group flex items-center cursor-pointer">
-                            <input className="hidden peer " type="checkbox" name="bill" value={"cash"} />
+                            <input className="hidden peer " type="checkbox" checked={selected === "cash"} onChange={()=> setSelected("cash")} name="bill" value={"cash"} />
                             <span className="relative w-5 h-5 flex justify-center items-center bg-gray-100 border border-yellow-400  shadow-md transition-all duration-500 peer-checked:border-yellow-400 peer-checked:bg-yellow-400 peer-hover:scale-105 p-1">
                                 <span className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100  transition-all duration-500 peer-checked:animate-pulse" />
                                 <svg fill="currentColor" viewBox="0 0 20 20" className="hidden w-2 h-2 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +44,7 @@ export default function Release() {
                     {/* 2 */}
                     <div className="flex items-center space-x-2 mb-3">
                         <label className="group flex items-center cursor-pointer">
-                            <input className="hidden peer " type="checkbox" name="bill" value={"cheque"} />
+                            <input className="hidden peer " type="checkbox" checked={selected === "cheque"} onChange={()=> setSelected("cheque")} name="bill" value={"cheque"} />
                             <span className="relative w-5 h-5 flex justify-center items-center bg-gray-100 border border-yellow-400  shadow-md transition-all duration-500 peer-checked:border-yellow-400 peer-checked:bg-yellow-400 peer-hover:scale-105 p-1">
                                 <span className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100  transition-all duration-500 peer-checked:animate-pulse" />
                                 <svg fill="currentColor" viewBox="0 0 20 20" className="hidden w-2 h-2 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +59,7 @@ export default function Release() {
                     {/* 3 */}
                     <div className="flex items-center space-x-2 mb-3">
                         <label className="group flex items-center cursor-pointer">
-                            <input className="hidden peer " type="checkbox" name="bill" value={"bank transfer"}/>
+                            <input className="hidden peer " type="checkbox" checked={selected === "bank transfer"} onChange={()=> setSelected("bank transfer")} name="bill" value={"bank transfer"}/>
                             <span className="relative w-5 h-5 flex justify-center items-center bg-gray-100 border border-yellow-400  shadow-md transition-all duration-500 peer-checked:border-yellow-400 peer-checked:bg-yellow-400 peer-hover:scale-105 p-1">
                                 <span className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100  transition-all duration-500 peer-checked:animate-pulse" />
                                 <svg fill="currentColor" viewBox="0 0 20 20" className="hidden w-2 h-2 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100" xmlns="http://www.w3.org/2000/svg">
