@@ -147,9 +147,9 @@ export default function CompanyDashboard() {
                 <div className="flex gap-3 w-full justify-between ">
                     <h2 className="text-2xl font-bold mb-4">Truck</h2>
                     <div className="flex space-x-2 mb-4">
-                        <div className=" flex justify-center items-center w-8 h-8 rounded-full shadow-lg">
+                        <button onClick={()=> router.push("./addTruck")}  className=" flex justify-center items-center w-8 h-8 rounded-full shadow-lg">
                             <FaPlus />
-                        </div>
+                        </button>
                     </div>
 
                 </div>
