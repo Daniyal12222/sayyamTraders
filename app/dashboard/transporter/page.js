@@ -13,7 +13,7 @@ export default function Transporter() {
             {/* heading */}
             <div className="w-full mt-5 flex justify-between">
                 <h1 className="font-bold text-3xl">Transporter</h1>
-                <button className="w-[15vw] rounded bg-stone-600 text-white px-3 py-1" >release money</button>
+                <Link href={"./transporter/releaseMoney"} className="w-[15vw] rounded bg-stone-600 text-center text-white px-3 py-1" >release money</Link>
             </div>
             {/* dropdown */}
             <div className="w-full flex  gap-2 pt-2 mt-4">

@@ -1,12 +1,18 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft } from "react-icons/hi";
+import { useRouter } from "next/navigation";
+// import { HiArrowLeft } from "react-icons/hi";
+// import { useRouter } from "next/navigation";
+// <button onClick={()=> router.back()} className=" absolute left-8 top-5 "><HiArrowLeft /></button>
 
 export default function Login() {
+  const router = useRouter();
   return (
     <div className="w-full h-[100vh] flex justify-center items-center bg-g\ ">
       <div className="w-[40%] h-[50vh] shadow-lg   flex flex-col justify-around items-center relative">
- <button className=" absolute left-8 top-5 "><HiArrowLeft /></button>
+ <button onClick={()=> router.back()} className=" absolute left-8 top-5 "><HiArrowLeft /></button>
         <p className="text-black font-bold text-2xl">Change Password</p>
 
         <form  className="flex flex-col justify-center items-center gap-3 mb-2  w-[80%] " >

@@ -1,11 +1,20 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { HiArrowLeft } from "react-icons/hi";
+import { MdEdit } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 export default function CompanyDashboard() {
+  const router = useRouter();
   return (
     <div className="p-6 space-y-6 bg-gray-100 min-h-screen">
+  <div className="w-full flex  justify-between items-center">
+      <button onClick={()=> router.back()}  className="text-3xl "><HiArrowLeft /></button>
+        <p className="flex text-md text-neutral-600"><MdEdit />EDIT DETAILS</p>
+      </div>
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Company Name</h1>
