@@ -6,7 +6,7 @@ import { TiPlus } from "react-icons/ti";
 export default function Dashboard() {
 
     return (
-        <div className="w-full h-full flex flex-col overflow-y-auto relative ">
+        <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center">
                 <Link href={"../../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>

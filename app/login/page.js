@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Login() {
   return (
     <div className="w-full h-[100vh] flex justify-center items-center flex-col " style={{ backgroundColor: "#f5f5f5" }}>
-      <div className=" w-[40%]">
+      <div className=" w-[90%] md:w-[40%]">
 
         <Image
           src={require("../../public/icon-T.png")}
@@ -17,7 +17,7 @@ export default function Login() {
           className="mb-5" />
       </div>
 
-      <div className="w-[40%] h-[50vh] shadow-md shadow-gray-700  bg-white  flex flex-col justify-around items-center mb-5 pt-5">
+      <div className=" w-[90%] h-[30vh] md:w-[40%] md:h-[50vh] shadow-md shadow-gray-700  bg-white  flex flex-col justify-around items-center mb-5 pt-5">
 
         <p className="text-neutral-700 text-md">Please enter your login details</p>
 

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Sources() {
 
     return (
-        <div className="w-full h-full flex flex-col overflow-y-auto relative px-4 sm:px-6 md:px-8">
+        <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative  px-4 sm:px-6 md:px-8">
             {/* setting */}
             <div className="w-full flex justify-end items-center mt-4">
                 <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-700 text-md">
@@ -66,7 +66,7 @@ export default function Sources() {
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/sources/sourcesD"} className="w-[10vh] h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2">
+            <Link href={"/dashboard/sources/sourcesD"} className=" w-16 h-16 text-2xl md:w-[10vh] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2">
                 <TiPlus />
             </Link>
         </div>

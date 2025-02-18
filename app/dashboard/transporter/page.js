@@ -5,33 +5,27 @@ import Link from "next/link";
 export default function Transporter() {
 
     return (
-        <div className="w-full h-full flex flex-col overflow-y-auto relative ">
+        <div className="w-full h-[86vh] md:h-auto flex flex-col overflow-y-auto relative ">
             {/* setting */}
-            <div className="w-full flex justify-end items-center">
-                <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>
+            <div className="w-full flex justify-end items-center mt-4">
+                <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-700 text-md">
+                    <p className="text-lg"><IoSettingsSharp /></p> Settings
+                </Link>
             </div>
             {/* heading */}
-            <div className="w-full mt-5 flex justify-between">
-                <h1 className="font-bold text-3xl">Transporter</h1>
-                <Link href={"./transporter/releaseMoney"} className="w-[15vw] rounded bg-stone-600 text-center text-white px-3 py-1" >release money</Link>
+            <div className="w-full mt-5 flex justify-between flex-col sm:flex-row">
+                <h1 className="font-bold text-3xl sm:text-4xl">Sources</h1>
+                <Link href={"./sources/releaseMoney"} className="w-full md:w-[12vw]  rounded bg-stone-400 text-center pt-1 text-white px-3  mt-3 sm:mt-0">
+                    Release money
+                </Link>
             </div>
-            {/* dropdown */}
-            <div className="w-full flex  gap-2 pt-2 mt-4">
+             {/* dropdown */}
+             <div className="w-full flex gap-2 pt-2 mt-4 flex-col sm:flex-row">
                 {/* 1 */}
-                <select className="w-[12vw] shadow  px-3 py-1 focus:outline-none font-light  text-sm">
-                    <option className="text-sm font-thin" value="all" defaultChecked  >Sort By: Ascending </option>
+                <select className="w-full sm:w-[12vw] shadow px-3 py-1 rounded focus:outline-none font-light text-sm">
+                    <option className="text-sm font-thin" value="all" defaultChecked >Sort By: Ascending </option>
                     <option className="text-sm font-thin" value="pending">Pending</option>
                     <option className="text-sm font-thin" value="completed">Completed</option>
-                    <option className="text-sm font-thin" value="cancelled">Cancelled</option>
-                    <option className="text-sm font-thin" value="delayed">Delayed</option>
-                    <option className="text-sm font-thin" value="rejected">Rejected</option>
-                    <option className="text-sm font-thin" value="pending-payment">Pending Payment</option>
-                    <option className="text-sm font-thin" value="payment-failed">Payment Failed</option>
-                    <option className="text-sm font-thin" value="payment-succeeded">Payment Succeeded</option>
-                    <option className="text-sm font-thin" value="canceled-by-customer">Canceled by Customer</option>
-                    <option className="text-sm font-thin" value="canceled-by-driver">Canceled by Driver</option>
-                    <option className="text-sm font-thin" value="canceled-by-admin">Canceled by Admin</option>
-                    <option className="text-sm font-thin" value="waiting-for-driver-confirmation">Waiting for Driver Confirmation</option>
                 </select>
             </div>
             {/* table */}
@@ -73,7 +67,7 @@ export default function Transporter() {
                 </table>
 
             </div>
-            <Link href={"/dashboard/transporter/transporterN"} className="w-[6%] h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold " ><TiPlus /> </Link>
+            <Link href={"/dashboard/transporter/transporterN"} className=" w-16 h-16 text-2xl md:w-[10vh] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold " ><TiPlus /> </Link>
 
         </div>
     )

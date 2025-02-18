@@ -10,7 +10,7 @@ export default function ForgotPassword() {
     const router = useRouter();
     return (
         <div className="w-full h-[100vh] flex justify-center items-center flex-col " style={{ backgroundColor: "#f5f5f5" }}>
-            <div className=" w-[40%]">
+            <div className="w-[90%]   md:w-[40%]">
 
                 <Image
                     src={require("../../public/icon-T.png")}
@@ -19,11 +19,11 @@ export default function ForgotPassword() {
                     height={100}
                     className="mb-5" />
             </div>
-            <div className="w-[40%] h-[50vh] shadow-lg  flex flex-col justify-evenly items-center bg-white relative">
-                <button onClick={()=>router.back()} className=" absolute left-8 top-9 text-xl "><HiArrowLeft /></button>
+            <div className="w-[90%] h-[30vh] md:w-[40%] md:h-[50vh]  shadow-lg  flex flex-col justify-evenly items-center bg-white relative">
+                <button onClick={()=>router.back()} className=" absolute left-8 top-9 text-2xl "><HiArrowLeft /></button>
 
 
-                <div className="w-[60%] ">
+                <div className=" w-[80%] md:w-[60%] ">
                     <p className="text-neutral-500 text-sm text-center ">Forgotten your password? just enter the email associated with it to reset it.</p>
                 </div>
                 <form className="flex flex-col justify-center items-center gap-3  w-[80%]   mb-5" >
