@@ -24,7 +24,7 @@ console.log(isOpen);
 
   return (
 
-    <div className={`w-[100vw] sm:absolute lg:relative z-10 lg:w-[20vw] ${isOpen? "h-[100vh]" : "h-[11vh]"} lg:h-[100vh] overflow-hidden   flex flex-col` } style={{ backgroundColor: "#fcb80d" }}>
+    <div className={`w-[100vw] sm:absolute lg:relative z-10 md:w-[20vw] ${isOpen? "h-[100vh]" : "h-[11vh]"} md:h-[100vh] overflow-hidden   flex flex-col` } style={{ backgroundColor: "#fcb80d" }}>
       {/* Logo Section */}
       <div className="w-full  flex lg:flex-col justify-between sm:items-center ps-4 lg:ps-0 lg:mt-10 ">
         <Image
@@ -34,7 +34,7 @@ console.log(isOpen);
           height={150}
           className=""
         />
-        <button onClick={toggleMenu} className=" justify-center items-center pe-7 lg:hidden flex flex-col space-y-1">
+        <button onClick={toggleMenu} className=" justify-center items-center pe-7 md:hidden flex flex-col space-y-1">
         <span className={`block h-0.5 w-6 bg-black transition-transform ${isOpen ? "rotate-45 translate-y-1" : ""}`} />
           <span className={`block h-0.5 w-6 bg-black transition-opacity ${isOpen ? "opacity-0" : "opacity-100"}`} />
           <span className={`block h-0.5 w-6 bg-black transition-transform ${isOpen ? "-rotate-45 -translate-y-1" : ""}`} />

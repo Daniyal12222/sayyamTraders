@@ -11,8 +11,8 @@ export default function Settings() {
 
     return (
         <div className="w-full h-[100vh] flex justify-center items-center  ">
-            <div className="w-[40%] h-[50vh] shadow-lg  flex flex-col justify-evenly items-center relative border">
-                <button onClick={() => { router.back() }} className=" absolute left-8 top-9  text-xl"><HiArrowLeft /></button>
+            <div className="w-[90%] md:w-[40%] h-[30vh] md:h-[50vh] shadow-lg  flex flex-col justify-evenly items-center relative border ">
+                <button onClick={() => { router.back() }} className=" absolute left-8 top-9  text-2xl"><HiArrowLeft /></button>
                 <div className="rounded-full bg-gray-300 absolute bottom-56">
                     <Image
                         src={require("./../../public/people.png")}
@@ -27,7 +27,7 @@ export default function Settings() {
                     <p className="text-center text-sm text-neutral-500">daniyal@gmail.com</p>
                 </div>
 
-                <Link href={"../changPassword"} className="w-[60%] px-4 py-3 text-sm text-black bg-s-orange-300 text-center hover:bg-s-yellow-400 font-semibold bg-yellow-400 ">Change password</Link>
+                <Link href={"../changPassword"} className="w-[80%] px-4 py-3 text-sm text-black bg-s-orange-300 text-center hover:bg-s-yellow-400 font-semibold bg-yellow-400 ">Change password</Link>
 
 
             </div>

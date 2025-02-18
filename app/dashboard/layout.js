@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <div className="w-full flex-none md:w-64 absolute z-10  sm:top-0 sm:left-0 md:relative">
         <Sidebar/>
       </div>
-      <div className="flex-grow p-6 md:overflow-y-auto md:p-12 mt-20 z-0 ">{children}</div>
+      <div className="flex-grow p-6 md:overflow-y-auto md:p-12 mt-20 md:mt-2 z-0 ">{children}</div>
     </div>
   );
 }

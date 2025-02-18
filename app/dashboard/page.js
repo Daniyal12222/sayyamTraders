@@ -16,74 +16,91 @@ export default function Dashboard() {
                 <h1 className="font-bold text-3xl">Trips</h1>
             </div>
             {/* dropdown */}
-            <div className="w-full flex  gap-2 pt-2 mt-4">
-                {/* 1 */}
-                <select className="w-[12vw] shadow  px-3 py-1 focus:outline-none font-light  text-sm">
-                    <option className="text-sm font-thin" value="all" defaultChecked disabled >Sort By: Ascending </option>
-                    <option className="text-sm font-thin" value="pending">Pending</option>
-                    <option className="text-sm font-thin" value="completed">Completed</option>
-                    <option className="text-sm font-thin" value="cancelled">Cancelled</option>
-                    <option className="text-sm font-thin" value="delayed">Delayed</option>
-                    <option className="text-sm font-thin" value="rejected">Rejected</option>
-                    <option className="text-sm font-thin" value="pending-payment">Pending Payment</option>
-                    <option className="text-sm font-thin" value="payment-failed">Payment Failed</option>
-                    <option className="text-sm font-thin" value="payment-succeeded">Payment Succeeded</option>
-                    <option className="text-sm font-thin" value="canceled-by-customer">Canceled by Customer</option>
-                    <option className="text-sm font-thin" value="canceled-by-driver">Canceled by Driver</option>
-                    <option className="text-sm font-thin" value="canceled-by-admin">Canceled by Admin</option>
-                    <option className="text-sm font-thin" value="waiting-for-driver-confirmation">Waiting for Driver Confirmation</option>
+            <div className="flex flex-col md:flex-row gap-4 items-center mt-2">
+                {/* Sort Dropdown */}
+                <select className="border border-gray-300 rounded-md p-2 text-sm w-full sm:w-auto">
+                    <option>Sort By: Ascending</option>
+                    <option>Sort By: Descending</option>
                 </select>
-                {/* 2 */}
-                <input type="date" className="w-[12vw] shadow  px-4 py-1 focus:outline-none font-light text-sm" placeholder="From" />
-                {/* 3 */}
-                <input type="date" className="w-[12vw] shadow  px-3 py-1  font-light text-sm" placeholder="To"/>
-                {/* 4 */}
-                <select  className="w-[12vw] shadow  px-3 py-1 focus:outline-none font-light  text-sm">
-                    <option value="all" defaultChecked  >Companies</option>
-                    <option value="all" defaultChecked  >Companies</option>
-                    <option value="all" defaultChecked  >Companies</option>
+
+                {/* Date Inputs */}
+                <label className="w-full md:w-[25%] flex relative">
+                    <p className="absolute top-2 left-2 text-sm">From :</p>
+                    <input
+                        type="text"
+                        placeholder="dd/mm/yy"
+                        className="rounded-md py-2 text-sm w-full sm:w-auto border ps-14"
+                    />
+                </label>
+                <label className="w-full md:w-[25%] flex relative">
+                    <p className="absolute top-2 left-2 text-sm">To :</p>
+                    <input
+                        type="text"
+                        placeholder="dd/mm/yy"
+                        className="rounded-md py-2 text-sm w-full sm:w-auto border ps-8"
+                    />
+                </label>
+
+                {/* Company Dropdown */}
+                <select className="border border-gray-300 rounded-md p-2 text-sm w-full sm:w-auto">
+                    <option>Company</option>
+                    <option>Company A</option>
+                    <option>Company B</option>
+                    <option>Company C</option>
                 </select>
             </div>
             {/* table */}
-            <div className="w-full border overflow-y-auto mt-8 rounded ">
-                <table className=" w-full " >
+            <div className="w-full border overflow-x-auto mt-8 rounded">
+                <table className="w-full min-w-[600px]">
                     <thead>
-                        <tr className="border text-center px-5 py-2 h-[8vh] bg-white ">
+                        <tr className="border text-center px-5 py-2 h-[8vh] bg-white">
                             <th>S#</th>
-                            <th>Name</th>
-                            <th>Vehicle</th>
-                            <th>Driver</th>
-                            <th>Status</th>
-                            <th>Payment Status</th>
-                            <th>Action</th>
+                            <th>NAME</th>
+                            <th>DATE</th>
+                            <th>TRUCK</th>
+                            <th>WEIGHT</th>
+                            <th>PRICE</th>
+                            <th>ASH COST</th>
+                            <th>TRAVEL EXP</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* rows */}
                         <tr className="border text-center px-5 py-4 text-neutral-600 h-[6vh] bg-white">
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td>Toyota Camry</td>
-                            <td>John Doe</td>
-                            <td>Completed</td>
-                            <td>Payment Succeeded</td>
-                            <td><button className="px-2 py-1 text-sm text-gray-600 hover:text-gray-900">View</button></td>
-                        </tr >
-                        <tr className="border text-center px-5 py-4 text-neutral-600 h-[6vh] bg-white">
-                            <td>02</td>
-                            <td>John Doe</td>
-                            <td>Toyota Camry</td>
-                            <td>John Doe</td>
-                            <td>Completed</td>
-                            <td>Payment Succeeded</td>
-                            <td><button className="px-2 py-1 text-sm text-gray-600 hover:text-gray-900">View</button></td>
+                            <td>1.</td>
+                            <td>ABC</td>
+                            <td>12/07/21</td>
+                            <td>XYZ</td>
+                            <td>1.5 Ton</td>
+                            <td>100,775</td>
+                            <td>128,754</td>
+                            <td>128,754</td>
                         </tr>
-                        </tbody>
+                        <tr className="border text-center px-5 py-4 text-neutral-600 h-[6vh] bg-white">
+                            <td>2.</td>
+                            <td>ABC</td>
+                            <td>12/07/21</td>
+                            <td>XYZ</td>
+                            <td>1.5 Ton</td>
+                            <td>100,775</td>
+                            <td>128,754</td>
+                            <td>128,754</td>
+                        </tr>
+                        <tr className="border text-center px-5 py-4 text-neutral-600 h-[6vh] bg-white">
+                            <td>3.</td>
+                            <td>ABC</td>
+                            <td>12/07/21</td>
+                            <td>XYZ</td>
+                            <td>1.5 Ton</td>
+                            <td>100,775</td>
+                            <td>128,754</td>
+                            <td>128,754</td>
+                        </tr>
 
+                    </tbody>
                 </table>
-                        
             </div>
-            <Link href={"/dashboard/tripAdd"} className="w-[6%] h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold " ><TiPlus /> </Link>
+            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]  md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl " ><TiPlus /> </Link>
 
 
         </div>
