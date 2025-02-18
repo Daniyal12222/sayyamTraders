@@ -10,8 +10,8 @@ import { useRouter } from "next/navigation";
 export default function Login() {
   const router = useRouter();
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center bg-g\ ">
-      <div className="w-[40%] h-[50vh] shadow-lg   flex flex-col justify-around items-center relative">
+    <div className="w-full h-[100vh] flex justify-center items-center  ">
+      <div className=" w-[90%] p-2 md:w-[40%] md:h-[50vh] shadow-lg  gap-3  flex flex-col justify-around items-center relative">
  <button onClick={()=> router.back()} className=" absolute left-8 top-5 "><HiArrowLeft /></button>
         <p className="text-black font-bold text-2xl">Change Password</p>
 

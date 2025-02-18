@@ -2,18 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 import { useRouter } from "next/navigation";
+import Loader from "./loader/page";
 
 export default function Home() {
   const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
+    setTimeout(() => {
       router.push("/dashboard");
-    }
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   return (
-   <div><h1>main page</h1></div>
+   <div>
+     {isLoading? <Loader /> : <div className="h-screen flex justify-center items-center">
+       Loading...
+      </div>} 
+    </div>
+    
   );
 }

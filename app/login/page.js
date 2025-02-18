@@ -17,9 +17,9 @@ export default function Login() {
           className="mb-5" />
       </div>
 
-      <div className=" w-[90%] h-[30vh] md:w-[40%] md:h-[50vh] shadow-md shadow-gray-700  bg-white  flex flex-col justify-around items-center mb-5 pt-5">
+      <div className=" w-[90%]  md:w-[40%] md:h-[50vh] shadow-md  shadow-gray-700  bg-white  flex flex-col justify-around items-center mb-5 pt-5">
 
-        <p className="text-neutral-700 text-md">Please enter your login details</p>
+        <p className="text-neutral-700 my-3 text-md">Please enter your login details</p>
 
         <form className="flex flex-col justify-center items-center gap-3  w-[80%] " >
           <label className=" relative w-[70%] ">
@@ -34,7 +34,7 @@ export default function Login() {
 
         </form>
 
-        <Link href="./forgotPassword" className="text-sm text-blue-500 hover:text-s-orange-500  hover:underline mb-3 ">Forgot Password?</Link>
+        <Link href="./forgotPassword" className="text-sm text-blue-500 mt-4 hover:text-s-orange-500  hover:underline mb-3 ">Forgot Password?</Link>
 
 
       </div>

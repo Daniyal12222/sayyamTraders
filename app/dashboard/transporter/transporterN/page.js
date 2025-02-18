@@ -145,7 +145,7 @@ export default function CompanyDashboard() {
             {/* truck Section */}
             <div className="p-4 bg-white rounded-lg shadow">
                 <div className="flex gap-3 w-full justify-between ">
-                    <h2 className="text-2xl font-bold mb-4">Truck</h2>
+                    <h2 className="text-2xl font-bold mb-4">Trucks</h2>
                     <div className="flex space-x-2 mb-4">
                         <button onClick={()=> router.push("./addTruck")}  className=" flex justify-center items-center w-8 h-8 rounded-full shadow-lg">
                             <FaPlus />
@@ -157,7 +157,7 @@ export default function CompanyDashboard() {
                     <thead className="">
                         <tr className="border">
                             <th className=" p-2">S#</th>
-                            <th className=" p-2">TRUCKS</th>
+                            <th className=" p-2">TRUCK</th>
                             <th className=" p-2">DRIVER NAME</th>
                             <th className=" p-2">HELPER NAME</th>
                             <th className=" p-2">TRIPS THIS MONTH</th>

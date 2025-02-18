@@ -20,10 +20,10 @@ export default function ForgotPassword() {
                     className="mb-5" />
             </div>
             <div className="w-[90%] h-[30vh] md:w-[40%] md:h-[50vh]  shadow-lg  flex flex-col justify-evenly items-center bg-white relative">
-                <button onClick={()=>router.back()} className=" absolute left-8 top-9 text-2xl "><HiArrowLeft /></button>
+                <button onClick={()=>router.back()} className=" absolute left-[4%] top-[9%] text-2xl "><HiArrowLeft /></button>
 
 
-                <div className=" w-[80%] md:w-[60%] ">
+                <div className=" w-[60%] md:w-[60%] ">
                     <p className="text-neutral-500 text-sm text-center ">Forgotten your password? just enter the email associated with it to reset it.</p>
                 </div>
                 <form className="flex flex-col justify-center items-center gap-3  w-[80%]   mb-5" >
