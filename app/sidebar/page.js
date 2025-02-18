@@ -22,14 +22,14 @@ export default function Sidebar() {
         <Image
           src={require("./../../public/sideIcon.png")}
           alt="Sayyam International Trader"
-          width={150}
-          height={150}
-          className="mb-5"
+          width={180}
+          height={180}
+          className="mb-10"
         />
       </div>
 
       {/* Links Section */}
-      <div className="w-full h-[80vh] flex flex-col justify-start md:ps-14 gap-3 overflow-y-auto">
+      <div className="w-full h-[80vh] flex flex-col justify-start md:ps-14 gap-3 mt-10 overflow-y-auto">
         {links.map((link) => (
           <Link
             key={link.path}

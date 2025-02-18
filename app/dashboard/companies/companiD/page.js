@@ -58,16 +58,16 @@ export default function CompanyDashboard() {
       <div className="w-full gap-2 flex">
 
         <Card>
-          <CardContent className="w[62%] p-6 grid grid-cols-3 gap-2 text-center">
-            <div className="">
+          <CardContent className="w[62%]   p-6 grid grid-cols-3 gap-2  text-center">
+            <div className="flex flex-col justify-center items-center   p-5">
               <p className="font-semibold">Contact person</p>
               <p className="text-sm text-neutral-600">Syed Haider</p>
             </div>
-            <div>
+            <div className="flex flex-col justify-center items-center  p-5">
               <p className="font-semibold">Cell#</p>
               <p className="text-sm text-neutral-600">03671432146</p>
             </div>
-            <div>
+            <div className="flex flex-col justify-center items-center  p-5">
               <p className="font-semibold">Price</p>
               <p className="text-sm text-neutral-600">11,466</p>
             </div>
