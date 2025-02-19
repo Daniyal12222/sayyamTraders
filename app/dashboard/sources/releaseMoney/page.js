@@ -7,7 +7,7 @@ export default function Release() {
     return (
         <div className=" w-full h-[86vh] md:h-auto flex justify-center  items-center ">
 
-            <div className=" bg-white  w-[90%] md:w-[50%] shadow-md p-12 relative">
+            <div className=" bg-white  w-[100%] md:w-[50%] shadow-md p-12 relative">
                 <button onClick={() => router.back()} className=" absolute left-6 top-7 text-xl "><HiArrowLeft /></button>
                 <h2 className="text-xl font-bold mb-4 text-center">Release source money</h2>
                 <div className=" w-full flex flex-col gap-4 mb-4">

@@ -57,23 +57,29 @@ export default function CompanyDashboard() {
 
       {/* Contact Information */}
       <div className="w-full gap-4 sm:gap-6 flex flex-wrap sm:flex-nowrap">
-        <Card className="w-full sm:w-2/3">
-          <CardContent className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <Card className="w-full flex flex-col md:flex-row bg-[#f2f3f5] sm:w-2/3">
+          {/* Contact Person */}
+          <CardContent className="p-6 border bg-white text-center md:rounded-l-md">
             <div className="flex flex-col justify-center items-center p-5">
-              <p className="font-semibold">Contact person</p>
+              <p className="font-semibold">Contact Person</p>
               <p className="text-sm text-neutral-600">Syed Haider</p>
             </div>
+          </CardContent>
+          {/* Cell Number */}
+          <CardContent className="p-6 border bg-white text-center">
             <div className="flex flex-col justify-center items-center p-5">
               <p className="font-semibold">Cell#</p>
               <p className="text-sm text-neutral-600">03671432146</p>
             </div>
+          </CardContent>
+          {/* Price */}
+          <CardContent className="p-6 border bg-white text-center md:rounded-r-md">
             <div className="flex flex-col justify-center items-center p-5">
               <p className="font-semibold">Price</p>
               <p className="text-sm text-neutral-600">11,466</p>
             </div>
           </CardContent>
         </Card>
-
         <div className="w-full sm:w-[50%] overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead>
@@ -120,16 +126,22 @@ export default function CompanyDashboard() {
       <div className="flex flex-wrap gap-4 w-full">
         <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
         <div className="flex flex-wrap gap-2 w-full sm:w-auto">
-          <input
-            type="text"
-            placeholder="From: dd/mm/yy"
-            className="border rounded px-2 py-1 w-full sm:w-auto"
-          />
-          <input
-            type="text"
-            placeholder="To: dd/mm/yy"
-            className="border rounded px-2 py-1 w-full sm:w-auto"
-          />
+          <div className=" relative md:w-[30%]">
+            <p className="font-medium top-1 left-2 absolute">From :</p>
+            <input
+              type="text"
+              placeholder="dd/mm/yy"
+              className="py-1 border w-full pl-14 rounded "
+            />
+          </div>
+          <div className=" relative md:w-[30%]">
+            <p className="font-medium top-1 left-2 absolute">To :</p>
+            <input
+              type="text"
+              placeholder="dd/mm/yy"
+              className="py-1 border w-full pl-9 rounded "
+            />
+          </div>
         </div>
       </div>
 
@@ -194,21 +206,29 @@ export default function CompanyDashboard() {
 
 
       {/* Trips Section */}
-      <div className="flex flex-wrap gap-4 w-full">
-        <h2 className="text-2xl font-bold w-full sm:w-auto">Trips</h2>
-        <div className="flex gap-2 w-full sm:w-auto">
-          <input
-            type="text"
-            placeholder="From: dd/mm/yy"
-            className="border rounded px-2 py-1 w-full sm:w-auto"
-          />
-          <input
-            type="text"
-            placeholder="To: dd/mm/yy"
-            className="border rounded px-2 py-1 w-full sm:w-auto"
-          />
+      <div className="flex flex-wrap justify-between gap-4 w-full ">
+        <div className=" flex flex-col md:flex-row gap-4">
+          <h2 className="text-2xl font-bold w-full sm:w-auto">Trips</h2>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">From :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-14 rounded "
+              />
+            </div>
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">To :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-9 rounded "
+              />
+            </div>
+          </div>
         </div>
-        <Button className="bg-yellow-400 hover:bg-yellow-500 text-black mx-auto sm:mx-0 mt-3 sm:mt-0">
+        <Button className="bg-yellow-400  hover:bg-yellow-500 text-black mx-auto sm:mx-0 mt-3 sm:mt-0">
           Generate bill
         </Button>
       </div>

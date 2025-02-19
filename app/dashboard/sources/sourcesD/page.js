@@ -18,7 +18,7 @@ export default function CompanyDashboard() {
 
       {/* Header */}
       <div className="flex flex-wrap justify-between items-center">
-        <h1 className="text-2xl font-bold w-full sm:w-auto">Company Name</h1>
+        <h1 className="text-2xl font-bold w-full sm:w-auto">Source Name</h1>
         <div className="flex gap-3  md:gap-2 mt-4 sm:mt-0">
           <Select>
             <SelectTrigger className="w-32">
@@ -77,7 +77,7 @@ export default function CompanyDashboard() {
 {/* Ledger Section */}
 <div className="flex flex-wrap gap-3 w-full items-center justify-between">
   <h2 className="text-2xl font-bold">Ledger</h2>
-  <div className="flex flex-wrap gap-2">
+  <div className="flex flex-nowrap md:flex-wrap gap-2">
     <input type="text" placeholder="From: dd/mm/yy" className="border rounded px-2 py-1 w-36" />
     <input type="text" placeholder="To: dd/mm/yy" className="border rounded px-2 py-1 w-36" />
   </div>

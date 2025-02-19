@@ -11,7 +11,7 @@ export default function NewCost() {
         {/* Back Button */}
         <button 
           onClick={() => router.back()} 
-          className="absolute left-4 top-4 text-xl text-neutral-600 hover:text-black transition"
+          className="absolute top-6 left-4 md:top-5 text-xl text-neutral-600 hover:text-black transition"
         >
           <HiArrowLeft />
         </button>

@@ -24,25 +24,26 @@ export default function Dashboard() {
                 </select>
 
                 {/* Date Inputs */}
-                <label className="w-full md:w-[25%] flex relative">
-                    <p className="absolute top-2 left-2 text-sm">From :</p>
+                <div className=" relative w-full md:w-[18%]">
+                    <p className="font-medium top-1 left-2 absolute">From :</p>
                     <input
-                        type="text"
-                        placeholder="dd/mm/yy"
-                        className="rounded-md py-2 text-sm w-full sm:w-auto border ps-14"
+                    type="text"
+                    placeholder="dd/mm/yy"
+                    className="py-1 border w-full pl-14 rounded "
                     />
-                </label>
-                <label className="w-full md:w-[25%] flex relative">
-                    <p className="absolute top-2 left-2 text-sm">To :</p>
+                </div>
+                <div className=" relative w-full md:w-[18%]">
+                    <p className="font-medium top-1 left-2 absolute">To :</p>
                     <input
-                        type="text"
-                        placeholder="dd/mm/yy"
-                        className="rounded-md py-2 text-sm w-full sm:w-auto border ps-8"
+                    type="text"
+                    placeholder="dd/mm/yy"
+                    className="py-1 border w-full pl-9 rounded "
                     />
-                </label>
+                </div>
+                
 
                 {/* Company Dropdown */}
-                <select className="border border-gray-300 rounded-md p-2 text-sm w-full sm:w-auto">
+                <select className="border border-gray-300 rounded-md p-2 text-sm w-full md:w-[19%]">
                     <option>Company</option>
                     <option>Company A</option>
                     <option>Company B</option>

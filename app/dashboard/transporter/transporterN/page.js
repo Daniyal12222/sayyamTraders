@@ -12,16 +12,15 @@ export default function CompanyDashboard() {
     const router = useRouter();
     return (
         <div className="p-6 space-y-6 bg-gray-100 min-h-screen">
-            <div className="w-full flex  justify-between items-center">
-                  <button onClick={()=> router.back()}  className="text-3xl "><HiArrowLeft /></button>
-                    <p className="flex text-md text-neutral-600"><MdEdit />EDIT DETAILS</p>
-            
-                  </div>
-            
+            <div className="w-full flex justify-between items-center">
+                <button onClick={() => router.back()} className="text-3xl"><HiArrowLeft /></button>
+                <p className="flex text-md text-neutral-600"><MdEdit />EDIT DETAILS</p>
+            </div>
+
             {/* Header */}
-            <div className="flex justify-between items-center">
-                <h1 className="text-2xl font-bold">Transporter Name</h1>
-                <div className="flex gap-2 ">
+            <div className="flex flex-wrap justify-between items-center">
+                <h1 className="text-2xl font-bold w-full sm:w-auto">Company Name</h1>
+                <div className="flex gap-3  md:gap-2 mt-4 sm:mt-0">
                     <Select>
                         <SelectTrigger className="w-32">
                             <SelectValue placeholder="June" />
@@ -36,7 +35,7 @@ export default function CompanyDashboard() {
             </div>
 
             {/* Metrics Cards */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <Card>
                     <CardContent className="p-4 text-center">
                         <p className="text-3xl font-bold">112,633</p>
@@ -56,12 +55,9 @@ export default function CompanyDashboard() {
                     </CardContent>
                 </Card>
             </div>
-
             {/* Contact Information */}
-
-
             <Card>
-                <CardContent className=" p-6 grid grid-cols-3 gap-2 text-center">
+                <CardContent className=" p-6 grid md:grid-cols-3 gap-2 text-center">
                     <div className="">
                         <p className="font-semibold">Contact person</p>
                         <p className="text-sm text-neutral-600">Syed Haider</p>
@@ -86,123 +82,92 @@ export default function CompanyDashboard() {
             </div>
 
             {/* Ledger Section */}
-            <div className="p-4 bg-white rounded-lg shadow">
-                <div className="flex gap-3 w-full ">
-                    <h2 className="text-2xl font-bold mb-4">Ledger</h2>
-                    <div className="flex space-x-2 mb-4">
-                        <input type="text" placeholder="From: dd/mm/yy" className="border rounded px-2 py-1" />
-                        <input type="text" placeholder="To: dd/mm/yy" className="border rounded px-2 py-1" />
-                    </div>
+            <div className="flex flex-wrap gap-4 w-full">
+                <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
+                <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <input
+                        type="text"
+                        placeholder="From: dd/mm/yy"
+                        className="border rounded px-2 py-1 w-full sm:w-auto"
+                    />
+                    <input
+                        type="text"
+                        placeholder="To: dd/mm/yy"
+                        className="border rounded px-2 py-1 w-full sm:w-auto"
+                    />
                 </div>
-                <table className="w-full border-collapse border border-gray-200">
-                    <thead className="">
-                        <tr className="border">
-                            <th className=" p-2">S#</th>
-                            <th className=" p-2">NAME</th>
-                            <th className=" p-2">DATE</th>
-                            <th className=" p-2">DEBIT</th>
-                            <th className=" p-2">CREDIT</th>
-                            <th className=" p-2">BALANCE</th>
-                            <th className=" p-2">REASON</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1</td>
-                            <td className=" text-neutral-600 p-2">jamal</td>
-                            <td className=" text-neutral-600 p-2 text-center">12/07/21</td>
-                            <td className=" text-neutral-600 p-2 text-center">4367</td>
-                            <td className=" text-neutral-600 p-2 text-center">11,675</td>
-                            <td className=" text-neutral-600 p-2 text-center">11,675</td>
-                            <td className=" text-neutral-600 p-2">Lorem ipsum doler sit emit </td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1</td>
-                            <td className=" text-neutral-600 p-2">jamal</td>
-                            <td className=" text-neutral-600 p-2 text-center">12/07/21</td>
-                            <td className=" text-neutral-600 p-2 text-center">4367</td>
-                            <td className=" text-neutral-600 p-2 text-center">11,675</td>
-                            <td className=" text-neutral-600 p-2 text-center">11,675</td>
-                            <td className=" text-neutral-600 p-2">Lorem ipsum doler sit emit </td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1</td>
-                            <td className=" text-neutral-600 p-2">jamal</td>
-                            <td className=" text-neutral-600 p-2 text-center">12/07/21</td>
-                            <td className=" text-neutral-600 p-2 text-center">4367</td>
-                            <td className=" text-neutral-600 p-2 text-center">11,675</td>
-                            <td className=" text-neutral-600 p-2 text-center">11,675</td>
-                            <td className=" text-neutral-600 p-2">Lorem ipsum doler sit emit </td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-
-                    </tbody>
-                </table>
             </div>
-
-            {/* truck Section */}
             <div className="p-4 bg-white rounded-lg shadow">
-                <div className="flex gap-3 w-full justify-between ">
-                    <h2 className="text-2xl font-bold mb-4">Trucks</h2>
-                    <div className="flex space-x-2 mb-4">
-                        <button onClick={()=> router.push("./addTruck")}  className=" flex justify-center items-center w-8 h-8 rounded-full shadow-lg">
-                            <FaPlus />
-                        </button>
-                    </div>
-
+                <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border ">
+                        <thead>
+                            <tr className="border ">
+                                <th className="p-2">S#</th>
+                                <th className="p-2">NAME</th>
+                                <th className="p-2">DATE</th>
+                                <th className="p-2">DEBIT</th>
+                                <th className="p-2">CREDIT</th>
+                                <th className="p-2">BALANCE</th>
+                                <th className="p-2">REASON</th>
+                                <th className="p-2">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className="border">
+                                <td className="text-neutral-600 p-2 text-center">1</td>
+                                <td className="text-neutral-600 p-2">Jamal</td>
+                                <td className="text-neutral-600 p-2 text-center">12/07/21</td>
+                                <td className="text-neutral-600 p-2 text-center">4,367</td>
+                                <td className="text-neutral-600 p-2 text-center">11,675</td>
+                                <td className="text-neutral-600 p-2 text-center">11,675</td>
+                                <td className="text-neutral-600 p-2">Lorem ipsum dolor sit amet</td>
+                                <td className="p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table className="w-full border-collapse border border-gray-200">
-                    <thead className="">
-                        <tr className="border">
-                            <th className=" p-2">S#</th>
-                            <th className=" p-2">TRUCK</th>
-                            <th className=" p-2">DRIVER NAME</th>
-                            <th className=" p-2">HELPER NAME</th>
-                            <th className=" p-2">TRIPS THIS MONTH</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1.</td>
-                            <td className=" text-neutral-600 p-2 text-center">ABC</td>
-                            <td className=" text-neutral-600 p-2 text-center">Abid Ali</td>
-                            <td className=" text-neutral-600 p-2 text-center">Raheem</td>
-                            <td className=" text-neutral-600 p-2 text-center">12</td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1.</td>
-                            <td className=" text-neutral-600 p-2 text-center">ABC</td>
-                            <td className=" text-neutral-600 p-2 text-center">Abid Ali</td>
-                            <td className=" text-neutral-600 p-2 text-center">Raheem</td>
-                            <td className=" text-neutral-600 p-2 text-center">12</td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1.</td>
-                            <td className=" text-neutral-600 p-2 text-center">ABC</td>
-                            <td className=" text-neutral-600 p-2 text-center">Abid Ali</td>
-                            <td className=" text-neutral-600 p-2 text-center">Raheem</td>
-                            <td className=" text-neutral-600 p-2 text-center">12</td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-                        <tr className="border">
-                            <td className=" text-neutral-600 p-2 text-center">1.</td>
-                            <td className=" text-neutral-600 p-2 text-center">ABC</td>
-                            <td className=" text-neutral-600 p-2 text-center">Abid Ali</td>
-                            <td className=" text-neutral-600 p-2 text-center">Raheem</td>
-                            <td className=" text-neutral-600 p-2 text-center">12</td>
-                            <td className=" p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
-                        </tr>
-
-                    </tbody>
-                </table>
             </div>
 
 
+            {/* Header Section */}
+            <div className="flex  sm:flex-row justify-between items-start sm:items-center w-full">
+                <h2 className="text-2xl font-bold">Trucks</h2>
+                <button
+                    onClick={() => router.push("./addTruck")}
+                    className="flex justify-center items-center w-7 h-7 md:h-10 md:w-10 rounded-full shadow-lg   transition-all mt-2 sm:mt-0"
+                >
+                    <FaPlus />
+                </button>
+            </div>
+            {/* Truck Section */}
+            <div className="p-4 bg-white rounded-lg shadow">
+
+                {/* Table Section */}
+                <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border">
+                        <thead className="">
+                            <tr className="border">
+                                <th className="p-2">S#</th>
+                                <th className="p-2">TRUCK</th>
+                                <th className="p-2">DRIVER NAME</th>
+                                <th className="p-2">HELPER NAME</th>
+                                <th className="p-2">TRIPS THIS MONTH</th>
+                                <th className="p-2">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className="border">
+                                <td className="text-neutral-600 p-2 text-center">1</td>
+                                <td className="text-neutral-600 p-2 text-center">ABC</td>
+                                <td className="text-neutral-600 p-2 text-center">Abid Ali</td>
+                                <td className="text-neutral-600 p-2 text-center">Raheem</td>
+                                <td className="text-neutral-600 p-2 text-center">12</td>
+                                <td className="p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     );
 }
