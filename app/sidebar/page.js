@@ -48,6 +48,7 @@ console.log(isOpen);
           <Link
             key={link.path}
             href={link.path}
+            onClick={() => setIsOpen(false) }
             className={` hover:font-semibold text-lg ${pathname === link.path ? "font-bold text-black" : "font-normal text-gray-800"
               }`}
           >

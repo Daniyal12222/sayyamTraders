@@ -18,26 +18,16 @@ export default function Companies() {
             {/* heading */}
             <div className="w-full mt-5 flex justify-between flex-col sm:flex-row">
                 <h1 className="font-bold text-3xl sm:text-4xl">Companies</h1>
-                <button onClick={() => router.push("./companies/companiBill")} className="w-full sm:w-[15vw] rounded bg-stone-600 text-white px-3 py-1 mt-3 sm:mt-0">
+                <button onClick={() => router.push("./companies/companiBill")} className="w-full md:w-[12vw]  rounded bg-stone-400 text-center pt-1 text-white px-3  mt-3 sm:mt-0">
                     Release money
                 </button>
             </div>
             {/* dropdown */}
             <div className="w-full flex gap-2 pt-2 mt-4 flex-col sm:flex-row">
-                <select className="w-full sm:w-[12vw] shadow px-3 py-1 focus:outline-none font-light text-sm">
+                <select className="w-full sm:w-[12vw] shadow rounded px-3 py-1 focus:outline-none font-light text-sm">
                     <option className="text-sm font-thin" value="all" defaultChecked>Sort By: Ascending </option>
                     <option className="text-sm font-thin" value="pending">Pending</option>
                     <option className="text-sm font-thin" value="completed">Completed</option>
-                    <option className="text-sm font-thin" value="cancelled">Cancelled</option>
-                    <option className="text-sm font-thin" value="delayed">Delayed</option>
-                    <option className="text-sm font-thin" value="rejected">Rejected</option>
-                    <option className="text-sm font-thin" value="pending-payment">Pending Payment</option>
-                    <option className="text-sm font-thin" value="payment-failed">Payment Failed</option>
-                    <option className="text-sm font-thin" value="payment-succeeded">Payment Succeeded</option>
-                    <option className="text-sm font-thin" value="canceled-by-customer">Canceled by Customer</option>
-                    <option className="text-sm font-thin" value="canceled-by-driver">Canceled by Driver</option>
-                    <option className="text-sm font-thin" value="canceled-by-admin">Canceled by Admin</option>
-                    <option className="text-sm font-thin" value="waiting-for-driver-confirmation">Waiting for Driver Confirmation</option>
                 </select>
             </div>
             {/* table */}

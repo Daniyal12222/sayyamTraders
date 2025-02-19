@@ -83,19 +83,27 @@ export default function CompanyDashboard() {
 
             {/* Ledger Section */}
             <div className="flex flex-wrap gap-4 w-full">
-                <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
-                <div className="flex flex-wrap gap-2 w-full sm:w-auto">
-                    <input
-                        type="text"
-                        placeholder="From: dd/mm/yy"
-                        className="border rounded px-2 py-1 w-full sm:w-auto"
-                    />
-                    <input
-                        type="text"
-                        placeholder="To: dd/mm/yy"
-                        className="border rounded px-2 py-1 w-full sm:w-auto"
-                    />
-                </div>
+            <div className=" flex flex-col md:flex-row gap-4">
+          <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">From :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-14 rounded "
+              />
+            </div>
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">To :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-9 rounded "
+              />
+            </div>
+          </div>
+        </div>
             </div>
             <div className="p-4 bg-white rounded-lg shadow">
                 <div className="overflow-x-auto">
@@ -113,6 +121,26 @@ export default function CompanyDashboard() {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr className="border">
+                                <td className="text-neutral-600 p-2 text-center">1</td>
+                                <td className="text-neutral-600 p-2">Jamal</td>
+                                <td className="text-neutral-600 p-2 text-center">12/07/21</td>
+                                <td className="text-neutral-600 p-2 text-center">4,367</td>
+                                <td className="text-neutral-600 p-2 text-center">11,675</td>
+                                <td className="text-neutral-600 p-2 text-center">11,675</td>
+                                <td className="text-neutral-600 p-2">Lorem ipsum dolor sit amet</td>
+                                <td className="p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
+                            </tr>
+                            <tr className="border">
+                                <td className="text-neutral-600 p-2 text-center">1</td>
+                                <td className="text-neutral-600 p-2">Jamal</td>
+                                <td className="text-neutral-600 p-2 text-center">12/07/21</td>
+                                <td className="text-neutral-600 p-2 text-center">4,367</td>
+                                <td className="text-neutral-600 p-2 text-center">11,675</td>
+                                <td className="text-neutral-600 p-2 text-center">11,675</td>
+                                <td className="text-neutral-600 p-2">Lorem ipsum dolor sit amet</td>
+                                <td className="p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
+                            </tr>
                             <tr className="border">
                                 <td className="text-neutral-600 p-2 text-center">1</td>
                                 <td className="text-neutral-600 p-2">Jamal</td>
@@ -156,6 +184,22 @@ export default function CompanyDashboard() {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr className="border">
+                                <td className="text-neutral-600 p-2 text-center">1</td>
+                                <td className="text-neutral-600 p-2 text-center">ABC</td>
+                                <td className="text-neutral-600 p-2 text-center">Abid Ali</td>
+                                <td className="text-neutral-600 p-2 text-center">Raheem</td>
+                                <td className="text-neutral-600 p-2 text-center">12</td>
+                                <td className="p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
+                            </tr>
+                            <tr className="border">
+                                <td className="text-neutral-600 p-2 text-center">1</td>
+                                <td className="text-neutral-600 p-2 text-center">ABC</td>
+                                <td className="text-neutral-600 p-2 text-center">Abid Ali</td>
+                                <td className="text-neutral-600 p-2 text-center">Raheem</td>
+                                <td className="text-neutral-600 p-2 text-center">12</td>
+                                <td className="p-2 text-blue-500 cursor-pointer hover:underline">✎ Edit</td>
+                            </tr>
                             <tr className="border">
                                 <td className="text-neutral-600 p-2 text-center">1</td>
                                 <td className="text-neutral-600 p-2 text-center">ABC</td>

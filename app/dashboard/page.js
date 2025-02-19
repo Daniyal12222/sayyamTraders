@@ -18,7 +18,7 @@ export default function Dashboard() {
             {/* dropdown */}
             <div className="flex flex-col md:flex-row gap-4 items-center mt-2">
                 {/* Sort Dropdown */}
-                <select className="border border-gray-300 rounded-md p-2 text-sm w-full sm:w-auto">
+                <select className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
                     <option>Sort By: Ascending</option>
                     <option>Sort By: Descending</option>
                 </select>
@@ -40,10 +40,8 @@ export default function Dashboard() {
                     className="py-1 border w-full pl-9 rounded "
                     />
                 </div>
-                
-
                 {/* Company Dropdown */}
-                <select className="border border-gray-300 rounded-md p-2 text-sm w-full md:w-[19%]">
+                <select className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full md:w-[19%]">
                     <option>Company</option>
                     <option>Company A</option>
                     <option>Company B</option>

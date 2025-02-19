@@ -6,14 +6,16 @@ import { HiCheck } from "react-icons/hi";
 
 export default function SuccessfullSent() {
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center ">
-      <div className="w-[40%] h-[50vh] shadow-lg  flex flex-col justify-around items-center">
+    <div className="w-full h-[86vh] md:h-[100vh] flex justify-center items-center ">
+      <div className=" w-[90%]  md:w-[40%] md:h-[50vh] shadow-2xl  flex flex-col justify-around items-center">
 
-        <div className="w-[50%] flex flex-col justify-evenly items-center">
+        <div className=" w-[90%] md:w-[50%] flex flex-col justify-evenly items-center">
           <Image
             src={require("../../public/check.png")}
             alt="Sayyam International Trader"
-            className="w-[6vw] h-[14vh] mb-5"
+            width={90}
+            height={90}
+            className="my-5"
           />
           <h1 className="text-lg font-bold   ">Successfully Sent</h1>
           <p className="text-md text-center text-neutral-500 ">Check your email for the link and then sign in.</p>

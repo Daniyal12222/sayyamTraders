@@ -13,12 +13,12 @@ export default function Settings() {
         <div className="w-full h-[100vh] flex justify-center items-center  ">
             <div className="w-[90%] md:w-[40%] h-[30vh] md:h-[50vh] shadow-lg  flex flex-col justify-evenly items-center relative border ">
                 <button onClick={() => { router.back() }} className=" absolute left-8 top-9  text-2xl"><HiArrowLeft /></button>
-                <div className="rounded-full bg-gray-300 absolute bottom-56">
+                <div className="rounded-full bg-gray-300 absolute bottom-44 md:bottom-56">
                     <Image
                         src={require("./../../public/people.png")}
                         alt="people"
-                        width={100}
-                        height={100}
+                        width={90}
+                        height={90}
                         className=""
                     />
                 </div>

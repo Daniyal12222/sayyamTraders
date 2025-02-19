@@ -124,23 +124,25 @@ export default function CompanyDashboard() {
 
       {/* Ledger Section */}
       <div className="flex flex-wrap gap-4 w-full">
-        <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
-        <div className="flex flex-wrap gap-2 w-full sm:w-auto">
-          <div className=" relative md:w-[30%]">
-            <p className="font-medium top-1 left-2 absolute">From :</p>
-            <input
-              type="text"
-              placeholder="dd/mm/yy"
-              className="py-1 border w-full pl-14 rounded "
-            />
-          </div>
-          <div className=" relative md:w-[30%]">
-            <p className="font-medium top-1 left-2 absolute">To :</p>
-            <input
-              type="text"
-              placeholder="dd/mm/yy"
-              className="py-1 border w-full pl-9 rounded "
-            />
+      <div className=" flex flex-col md:flex-row gap-4">
+          <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">From :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-14 rounded "
+              />
+            </div>
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">To :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-9 rounded "
+              />
+            </div>
           </div>
         </div>
       </div>

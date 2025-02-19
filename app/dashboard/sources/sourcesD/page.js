@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 export default function CompanyDashboard() {
   const router = useRouter();
   return (
-    <div className="p-6 space-y-6 bg-gray-100 min-h-screen relative">
+    <div className="p-2 space-y-6 bg-gray-100 min-h-screen relative">
       <div className="w-full flex justify-between items-center">
         <button onClick={() => router.back()} className="text-3xl"><HiArrowLeft /></button>
         <p className="flex text-md text-neutral-600"><MdEdit />EDIT DETAILS</p>
@@ -76,11 +76,27 @@ export default function CompanyDashboard() {
       </Card>
 {/* Ledger Section */}
 <div className="flex flex-wrap gap-3 w-full items-center justify-between">
-  <h2 className="text-2xl font-bold">Ledger</h2>
-  <div className="flex flex-nowrap md:flex-wrap gap-2">
-    <input type="text" placeholder="From: dd/mm/yy" className="border rounded px-2 py-1 w-36" />
-    <input type="text" placeholder="To: dd/mm/yy" className="border rounded px-2 py-1 w-36" />
-  </div>
+<div className=" flex flex-col md:flex-row gap-4">
+          <h2 className="text-2xl font-bold w-full sm:w-auto">Ledger</h2>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">From :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-14 rounded "
+              />
+            </div>
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">To :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-9 rounded "
+              />
+            </div>
+          </div>
+        </div>
 </div>
 
 <div className="p-4 bg-white rounded-lg shadow overflow-x-auto">
@@ -133,11 +149,27 @@ export default function CompanyDashboard() {
 
 {/*  Trips Section */}
   <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-    <h2 className="text-2xl font-bold">Trips</h2>
-    <div className="flex flex-wrap gap-2">
-      <input type="text" placeholder="From: dd/mm/yy" className="border rounded px-2 py-1 w-32 sm:w-40" />
-      <input type="text" placeholder="To: dd/mm/yy" className="border rounded px-2 py-1 w-32 sm:w-40" />
-    </div>
+  <div className=" flex flex-col md:flex-row gap-4">
+          <h2 className="text-2xl font-bold w-full sm:w-auto">Trips</h2>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">From :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-14 rounded "
+              />
+            </div>
+            <div className=" relative md:w-[30%]">
+              <p className="font-medium top-1 left-2 absolute">To :</p>
+              <input
+                type="text"
+                placeholder="dd/mm/yy"
+                className="py-1 border w-full pl-9 rounded "
+              />
+            </div>
+          </div>
+        </div>
   </div>
 <div className="p-4 bg-white rounded-lg shadow overflow-x-auto">
   <div className="overflow-x-auto">
