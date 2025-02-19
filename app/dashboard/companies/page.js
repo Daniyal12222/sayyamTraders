@@ -8,7 +8,7 @@ export default function Companies() {
     const router = useRouter();
 
     return (
-        <div className="w-full h-[86vh] md:h-auto  flex flex-col overflow-y-auto relative px-4 sm:px-6 md:px-8">
+        <div className="w-full h-[86vh] md:h-100   flex flex-col overflow-y-auto relative px-4 sm:px-6 md:px-8">
             {/* setting */}
             <div className="w-full flex justify-end items-center mt-4">
                 <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md">

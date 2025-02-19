@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Transporter() {
 
     return (
-        <div className="w-full h-[86vh] md:h-auto flex flex-col overflow-y-auto relative ">
+        <div className="w-full h-[86vh] md:h-100 flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center mt-4">
                 <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-700 text-md">

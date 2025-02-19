@@ -15,9 +15,9 @@ export default function ForgotPassword() {
                 <Image
                     src={require("../../public/icon-T.png")}
                     alt="Sayyam International Trader"
-                    width={100}
-                    height={100}
-                    className="mb-5" />
+                    width={120}
+                    height={120}
+                    className="mb-10" />
             </div>
             <div className="w-[90%] h-[30vh] md:w-[40%] md:h-[50vh]  shadow-lg  flex flex-col justify-evenly items-center bg-white relative">
                 <button onClick={()=>router.back()} className=" absolute left-[4%] top-[9%] text-2xl "><HiArrowLeft /></button>
