@@ -2,7 +2,7 @@
 
 export default function Loader  ()  {
   return (
-    <div className="w-full h-[100%] flex justify-center items-center" >
+    <div className="w-full h-dvh flex justify-center items-center absolute top-0 left-0 bg-[#f2f3f5] " >
     <div className="flex items-center justify-center min-h-screen">
       <div className="relative">
         <div className="relative w-32 h-32">

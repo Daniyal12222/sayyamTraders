@@ -2,11 +2,18 @@
 import { IoSettingsSharp } from "react-icons/io5";
 import { TiPlus } from "react-icons/ti";
 import Link from "next/link";
+import Loader from "@/app/loader/page";
+import { useEffect, useState } from "react";
 
 export default function Sources() {
+    const [isLoading, setIsLoading] = useState(true);
+
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
 
     return (
-        <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative  px-4 sm:px-6 md:px-8">
+        isLoading? <Loader /> : <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative  px-4 sm:px-6 md:px-8">
             {/* setting */}
             <div className="w-full flex justify-end items-center mt-4">
                 <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-700 text-md">

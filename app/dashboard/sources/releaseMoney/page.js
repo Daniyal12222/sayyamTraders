@@ -8,8 +8,8 @@ export default function Release() {
         <div className=" w-full h-[86vh] md:h-auto flex justify-center  items-center ">
 
             <div className=" bg-white  w-[100%] md:w-[50%] shadow-md p-12 relative">
-                <button onClick={() => router.back()} className=" absolute left-6 top-7 text-xl "><HiArrowLeft /></button>
-                <h2 className="text-xl font-bold mb-4 text-center">Release source money</h2>
+                <button onClick={() => router.back()} className=" absolute left-6 top-12  text-xl "><HiArrowLeft /></button>
+                <h2 className="md:text-xl font-bold mb-4 text-md    text-center">Release source money</h2>
                 <div className=" w-full flex flex-col gap-4 mb-4">
                     <select className=" border text-neutral-500  px-4 py-2 focus:outline-none focus:border-yellow-400 border-s-2 border-s-yellow-400">
                         <option>Source</option>

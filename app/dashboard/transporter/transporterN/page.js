@@ -19,7 +19,7 @@ export default function CompanyDashboard() {
 
             {/* Header */}
             <div className="flex flex-wrap justify-between items-center">
-                <h1 className="text-2xl font-bold w-full sm:w-auto">Company Name</h1>
+                <h1 className="text-2xl font-bold w-full sm:w-auto">Transporter Name</h1>
                 <div className="flex gap-3  md:gap-2 mt-4 sm:mt-0">
                     <Select>
                         <SelectTrigger className="w-32">

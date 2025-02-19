@@ -2,11 +2,21 @@
 import { IoSettingsSharp } from "react-icons/io5";
 import Link from "next/link";
 import { TiPlus } from "react-icons/ti";
+import Loader from "../loader/page";
+import { useEffect, useState } from "react";
 
 export default function Dashboard() {
 
+    const [isLoading, setIsLoading] = useState(true);
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
+    }, []);
+
     return (
-        <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative ">
+        isLoading ? <Loader /> : <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center">
                 <Link href={"../../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>
@@ -22,22 +32,21 @@ export default function Dashboard() {
                     <option>Sort By: Ascending</option>
                     <option>Sort By: Descending</option>
                 </select>
-
                 {/* Date Inputs */}
                 <div className=" relative w-full md:w-[18%]">
                     <p className="font-medium top-1 left-2 absolute">From :</p>
                     <input
-                    type="text"
-                    placeholder="dd/mm/yy"
-                    className="py-1 border w-full pl-14 rounded "
+                        type="text"
+                        placeholder="dd/mm/yy"
+                        className="py-1 border w-full pl-14 rounded "
                     />
                 </div>
                 <div className=" relative w-full md:w-[18%]">
                     <p className="font-medium top-1 left-2 absolute">To :</p>
                     <input
-                    type="text"
-                    placeholder="dd/mm/yy"
-                    className="py-1 border w-full pl-9 rounded "
+                        type="text"
+                        placeholder="dd/mm/yy"
+                        className="py-1 border w-full pl-9 rounded "
                     />
                 </div>
                 {/* Company Dropdown */}
@@ -95,13 +104,10 @@ export default function Dashboard() {
                             <td>128,754</td>
                             <td>128,754</td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]  md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl " ><TiPlus /> </Link>
-
-
+            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]  md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-xl " ><TiPlus /> </Link>
         </div>
     )
 }

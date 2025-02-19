@@ -3,12 +3,22 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { TiPlus } from "react-icons/ti";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import Loader from "@/app/loader/page";
+
 
 export default function Companies() {
     const router = useRouter();
+    const [isLoading, setIsLoading] = useState(true);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
+    }, []);
+    
     return (
-        <div className="w-full h-[86vh] md:h-100   flex flex-col overflow-y-auto relative px-4 sm:px-6 md:px-8">
+        isLoading ? <Loader /> : <div className="w-full min-h-[86vh] md:h-100   flex flex-col overflow-y-auto relative px-4 sm:px-6 md:px-8">
             {/* setting */}
             <div className="w-full flex justify-end items-center mt-4">
                 <Link href={"./../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md">
