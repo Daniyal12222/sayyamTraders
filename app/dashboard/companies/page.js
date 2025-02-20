@@ -108,7 +108,7 @@ export default function Companies() {
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/companies/companiD"} className="w-[8vh] h-[8vh] text-2xl bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl">
+            <Link href={"/dashboard/companies/companiD"} className="w-[8vh] h-[8vh]  bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl">
                 <IoMdAdd  />
             </Link>
         </div>
