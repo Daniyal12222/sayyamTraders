@@ -1,9 +1,10 @@
 "use client";
 import { IoSettingsSharp } from "react-icons/io5";
 import Link from "next/link";
-import { TiPlus } from "react-icons/ti";
+import { IoMdAdd  } from "react-icons/io";
 import Loader from "../loader/page";
 import { useEffect, useState } from "react";
+
 
 export default function Dashboard() {
 
@@ -19,7 +20,7 @@ export default function Dashboard() {
         isLoading ? <Loader /> : <div className="w-full h-[86vh] flex flex-col overflow-y-auto relative ">
             {/* setting */}
             <div className="w-full flex justify-end items-center">
-                <Link href={"../../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-500 text-md"><p className="text-lg"><IoSettingsSharp /></p> Settings</Link>
+                <Link href={"../../setting"} className="p-2 rounded flex justify-center items-center gap-2 text-neutral-600 font-light text-md"><p className="text-xl flex justify-center items-center gap-1"><IoSettingsSharp /></p>SETTING </Link>
             </div>
             {/* heading */}
             <div className="w-full ">
@@ -62,14 +63,14 @@ export default function Dashboard() {
                 <table className="w-full min-w-[600px]">
                     <thead>
                         <tr className="border text-center px-5 py-2 h-[8vh] bg-white">
-                            <th>S#</th>
-                            <th>NAME</th>
-                            <th>DATE</th>
-                            <th>TRUCK</th>
-                            <th>WEIGHT</th>
-                            <th>PRICE</th>
-                            <th>ASH COST</th>
-                            <th>TRAVEL EXP</th>
+                            <th className="p-3">S#</th>
+                            <th className="p-3">NAME</th>
+                            <th className="p-3">DATE</th>
+                            <th className="p-3">TRUCK</th>
+                            <th className="p-3">WEIGHT</th>
+                            <th className="p-3">PRICE</th>
+                            <th className="p-3">ASH COST</th>
+                            <th className="p-3">TRAVEL EXP</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -107,7 +108,7 @@ export default function Dashboard() {
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]  md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-xl " ><TiPlus /> </Link>
+            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]   md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-3xl " ><IoMdAdd  /> </Link>
         </div>
     )
 }

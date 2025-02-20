@@ -1,6 +1,6 @@
 "use client";
 import { IoSettingsSharp } from "react-icons/io5";
-import { TiPlus } from "react-icons/ti";
+import { IoMdAdd  } from "react-icons/io";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -105,8 +105,8 @@ export default function Companies() {
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/companies/companiD"} className="w-[8vh] h-[8vh] text-2xl bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold">
-                <TiPlus />
+            <Link href={"/dashboard/companies/companiD"} className="w-[8vh] h-[8vh] text-2xl bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl">
+                <IoMdAdd  />
             </Link>
         </div>
     );

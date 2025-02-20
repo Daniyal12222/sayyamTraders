@@ -174,7 +174,7 @@ export default function CompanyDashboard() {
 <div className="p-4 bg-white rounded-lg shadow overflow-x-auto">
   <div className="overflow-x-auto">
     <table className="w-full border-collapse border border-gray-200 min-w-[500px]">
-      <thead className="bg-gray-100">
+      <thead className="">
         <tr>
           <th className="p-2 text-sm">S#</th>
           <th className="p-2 text-sm">NAME</th>

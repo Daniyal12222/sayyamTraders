@@ -5,7 +5,7 @@ export default function AddTripForm() {
     const router = useRouter();
     return ( 
         <div className="px-3 flex flex-col  items-center justify-center h-[86vh] md:h-auto bg-gray-100 ">
-                <div className="bg-white p-6 rounded-lg shadow-md space-y-4 w-80 relative border" >
+                <div className="bg-white p-6 rounded-lg shadow-md space-y-4 w-90 relative border" >
                 <button onClick={() => router.back()} className=" absolute left-8 top-10 text-xl  "><HiArrowLeft /></button>
             <form className="space-y-4 ">
                 <h2 className="text-2xl font-bold text-center">Add A New Trip</h2>

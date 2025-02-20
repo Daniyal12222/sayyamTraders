@@ -1,6 +1,6 @@
 "use client";
 import { IoSettingsSharp } from "react-icons/io5";
-import { TiPlus } from "react-icons/ti";
+import { IoMdAdd  } from "react-icons/io";
 import Link from "next/link";
 import Loader from "@/app/loader/page";
 import { useEffect, useState } from "react";
@@ -78,7 +78,7 @@ export default function Transporter() {
                 </table>
 
             </div>
-            <Link href={"/dashboard/transporter/transporterN"} className=" w-16 h-16 text-2xl md:w-[10vh] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center  bottom-20 right-1 md:right-7 md:bottom-2 font-bold " ><TiPlus /> </Link>
+            <Link href={"/dashboard/transporter/transporterN"} className=" w-16 h-16 md:w-[10vh] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center  bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-3xl" ><IoMdAdd  /> </Link>
 
         </div>
     )
