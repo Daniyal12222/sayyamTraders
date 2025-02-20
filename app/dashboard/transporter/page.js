@@ -4,6 +4,7 @@ import { IoMdAdd  } from "react-icons/io";
 import Link from "next/link";
 import Loader from "@/app/loader/page";
 import { useEffect, useState } from "react";
+import { FaCaretDown } from "react-icons/fa";
 
 export default function Transporter() {
     const [isLoading, setIsLoading] = useState(true);
@@ -32,11 +33,13 @@ export default function Transporter() {
              {/* dropdown */}
              <div className="w-full flex gap-2 pt-2 mt-4 flex-col sm:flex-row">
                 {/* 1 */}
-                <select className="w-full sm:w-[12vw] shadow px-3 bg-white py-1 rounded focus:outline-none font-light text-sm">
-                    <option className="text-sm font-thin " value="all" defaultChecked >Sort By: Ascending </option>
-                    <option className="text-sm font-thin" value="pending">Pending</option>
-                    <option className="text-sm font-thin" value="completed">Completed</option>
-                </select>
+                <label htmlFor="an" className=" outline-none relative ">
+                <FaCaretDown className=" absolute right-0 top-2 pb-[4px] text-xl " />
+                    <select id="an" className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
+                        <option>Sort By: Ascending</option>
+                        <option>Sort By: Descending</option>
+                    </select>
+                </label>
             </div>
             {/* table */}
             <div className="w-full overflow-y-auto mt-8  ">

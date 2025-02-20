@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import Loader from "@/app/loader/page";
+import { FaCaretDown } from "react-icons/fa";
 
 
 export default function Companies() {
@@ -34,26 +35,28 @@ export default function Companies() {
             </div>
             {/* dropdown */}
             <div className="w-full flex gap-2 pt-2 mt-4 flex-col sm:flex-row">
-                <select className="w-full sm:w-[12vw] shadow rounded px-3 py-1 focus:outline-none font-light text-sm">
-                    <option className="text-sm font-thin" value="all" defaultChecked>Sort By: Ascending </option>
-                    <option className="text-sm font-thin" value="pending">Pending</option>
-                    <option className="text-sm font-thin" value="completed">Completed</option>
-                </select>
+            <label htmlFor="an" className=" outline-none relative ">
+                <FaCaretDown className=" absolute right-0 top-2 pb-[4px] text-xl " />
+                    <select id="an" className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
+                        <option>Sort By: Ascending</option>
+                        <option>Sort By: Descending</option>
+                    </select>
+                </label>
             </div>
             {/* table */}
             <div className="w-full overflow-x-auto mt-8">
                 <table className="w-full min-w-[600px]">
                     <thead>
                         <tr className="border text-center px-3 bg-white py-4 h-[8vh]">
-                            <th className="ps-2">S#</th>
-                            <th className="ps-2">NAME</th>
-                            <th className="ps-2">LOCATION</th>
-                            <th className="ps-2">PRICE</th>
-                            <th className="ps-2">CURR BILL</th>
-                            <th className="ps-2">TOT. PENDING</th>
-                            <th className="ps-2">TRAVEL EXP.</th>
-                            <th className="ps-2">CONTACT</th>
-                            <th className="ps-2">LAST TRIP</th>
+                            <th className="p-3">S#</th>
+                            <th className="p-3">NAME</th>
+                            <th className="p-3">LOCATION</th>
+                            <th className="p-3">PRICE</th>
+                            <th className="p-3">CURR BILL</th>
+                            <th className="p-3">TOT. PENDING</th>
+                            <th className="p-3">TRAVEL EXP.</th>
+                            <th className="p-3">CONTACT</th>
+                            <th className="p-3">LAST TRIP</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -1,15 +1,16 @@
 "use client";
 import { IoSettingsSharp } from "react-icons/io5";
 import Link from "next/link";
-import { IoMdAdd  } from "react-icons/io";
+import { IoMdAdd } from "react-icons/io";
 import Loader from "../loader/page";
 import { useEffect, useState } from "react";
+import { FaCaretDown } from "react-icons/fa";
 
 
 export default function Dashboard() {
 
     const [isLoading, setIsLoading] = useState(true);
-    
+
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
@@ -29,10 +30,13 @@ export default function Dashboard() {
             {/* dropdown */}
             <div className="flex flex-col md:flex-row gap-4 items-center mt-2">
                 {/* Sort Dropdown */}
-                <select className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
-                    <option>Sort By: Ascending</option>
-                    <option>Sort By: Descending</option>
-                </select>
+                <label htmlFor="an" className=" outline-none relative ">
+                <FaCaretDown className=" absolute right-0 top-2 pb-[4px] text-xl " />
+                    <select id="an" className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
+                        <option>Sort By: Ascending</option>
+                        <option>Sort By: Descending</option>
+                    </select>
+                </label>
                 {/* Date Inputs */}
                 <div className=" relative w-full md:w-[18%]">
                     <p className="font-medium top-1 left-2 absolute">From :</p>
@@ -51,12 +55,15 @@ export default function Dashboard() {
                     />
                 </div>
                 {/* Company Dropdown */}
-                <select className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full md:w-[19%]">
+                <label htmlFor="com" className=" outline-none relative ">
+                <FaCaretDown className=" absolute right-0 top-2 pb-[4px] text-xl " />
+                    <select id="com" className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
                     <option>Company</option>
                     <option>Company A</option>
                     <option>Company B</option>
                     <option>Company C</option>
-                </select>
+                    </select>
+                </label>
             </div>
             {/* table */}
             <div className="w-full border overflow-x-auto mt-8 rounded">
@@ -108,7 +115,7 @@ export default function Dashboard() {
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]   md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-3xl " ><IoMdAdd  /> </Link>
+            <Link href={"/dashboard/tripAdd"} className=" w-[16%] h-[8%]   md:w-[6%] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-3xl " ><IoMdAdd /> </Link>
         </div>
     )
 }

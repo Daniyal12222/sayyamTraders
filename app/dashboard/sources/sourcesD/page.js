@@ -13,7 +13,7 @@ export default function CompanyDashboard() {
     <div className="p-2 space-y-6 bg-gray-100 min-h-screen relative">
       <div className="w-full flex justify-between items-center">
         <button onClick={() => router.back()} className="text-3xl"><HiArrowLeft /></button>
-        <p className="flex text-md text-neutral-600"><MdEdit />EDIT DETAILS</p>
+        <p className="flex text-md text-neutral-600"><MdEdit /> EDIT DETAILS</p>
       </div>
 
       {/* Header */}
@@ -21,7 +21,7 @@ export default function CompanyDashboard() {
         <h1 className="text-2xl font-bold w-full sm:w-auto">Source Name</h1>
         <div className="flex gap-3  md:gap-2 mt-4 sm:mt-0">
           <Select>
-            <SelectTrigger className="w-32">
+            <SelectTrigger className="w-32 bg-white">
               <SelectValue placeholder="June" />
             </SelectTrigger>
             <SelectContent>
@@ -36,19 +36,19 @@ export default function CompanyDashboard() {
       {/* Metrics Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-10 text-center">
             <p className="text-3xl font-bold">112,633</p>
             <p className="text-gray-500">Pending Bill</p>
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-10 text-center">
             <p className="text-3xl font-bold">76,675</p>
             <p className="text-gray-500">Curr. Month Bill</p>
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-10 text-center">
             <p className="text-3xl font-bold">4</p>
             <p className="text-gray-500">Curr. Month Trips</p>
           </CardContent>

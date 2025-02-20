@@ -4,6 +4,7 @@ import { IoMdAdd  } from "react-icons/io";
 import Link from "next/link";
 import Loader from "@/app/loader/page";
 import { useEffect, useState } from "react";
+import { FaCaretDown } from "react-icons/fa";
 
 export default function Sources() {
     const [isLoading, setIsLoading] = useState(true);
@@ -31,11 +32,13 @@ export default function Sources() {
             {/* dropdown */}
             <div className="w-full flex gap-2 pt-2 mt-4 flex-col sm:flex-row">
                 {/* 1 */}
-                <select className="w-full sm:w-[12vw] shadow px-3 py-1 rounded focus:outline-none font-light text-sm">
-                    <option className="text-sm font-thin" value="all" defaultChecked >Sort By: Ascending </option>
-                    <option className="text-sm font-thin" value="pending">Pending</option>
-                    <option className="text-sm font-thin" value="completed">Completed</option>
-                </select>
+                <label htmlFor="an" className=" outline-none relative ">
+                <FaCaretDown className=" absolute right-0 top-2 pb-[4px] text-xl " />
+                    <select id="an" className="border border-gray-300 bg-white rounded-md p-2 text-sm w-full sm:w-auto">
+                        <option>Sort By: Ascending</option>
+                        <option>Sort By: Descending</option>
+                    </select>
+                </label>
             </div>
             {/* table */}
             <div className="w-full border overflow-x-auto mt-8 rounded">
@@ -43,7 +46,7 @@ export default function Sources() {
                     <thead >
                         <tr className="border text-center px-5 py-3 h-[8vh]  bg-white">
                             <th>S#</th>
-                            <th>Name</th>
+                            <th>NAME</th>
                             <th>CONTACT PERSON</th>
                             <th>CELL #</th>
                             <th>ASH COST</th>
