@@ -61,7 +61,7 @@ export default function Companies() {
                     </thead>
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                        <tr onClick={()=>{router.push("/dashboard/companies/companiD")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
                             <td className="px-3 py-2">01</td>
                             <td className="px-3 py-2">abd</td>
                             <td className="px-3 py-2">KHI</td>
@@ -72,8 +72,8 @@ export default function Companies() {
                             <td className="px-3 py-2">Jamal Ahmed</td>
                             <td className="px-3 py-2">ABC</td>
                         </tr>
-                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
-                            <td className="px-3 py-2">02</td>
+                        <tr onClick={()=>{router.push("/dashboard/companies/companiD")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                            <td className="px-3 py-2">01</td>
                             <td className="px-3 py-2">abd</td>
                             <td className="px-3 py-2">KHI</td>
                             <td className="px-3 py-2">2346</td>
@@ -83,8 +83,8 @@ export default function Companies() {
                             <td className="px-3 py-2">Jamal Ahmed</td>
                             <td className="px-3 py-2">ABC</td>
                         </tr>
-                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
-                            <td className="px-3 py-2">03</td>
+                        <tr onClick={()=>{router.push("/dashboard/companies/companiD")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                            <td className="px-3 py-2">01</td>
                             <td className="px-3 py-2">abd</td>
                             <td className="px-3 py-2">KHI</td>
                             <td className="px-3 py-2">2346</td>
@@ -94,21 +94,13 @@ export default function Companies() {
                             <td className="px-3 py-2">Jamal Ahmed</td>
                             <td className="px-3 py-2">ABC</td>
                         </tr>
-                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
-                            <td className="px-3 py-2">04</td>
-                            <td className="px-3 py-2">abd</td>
-                            <td className="px-3 py-2">KHI</td>
-                            <td className="px-3 py-2">2346</td>
-                            <td className="px-3 py-2">100,775</td>
-                            <td className="px-3 py-2">128,754</td>
-                            <td className="px-3 py-2">123</td>
-                            <td className="px-3 py-2">Jamal Ahmed</td>
-                            <td className="px-3 py-2">ABC</td>
-                        </tr>
+                       
+                        
+                        
                     </tbody>
                 </table>
             </div>
-            <Link href={"/dashboard/companies/companiD"} className="w-[8vh] h-[8vh]  bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl">
+            <Link href={"/dashboard/companies/newCompanie"} className="w-[8vh] h-[8vh]  bg-yellow-500 rounded-full absolute flex justify-center items-center right-7 bottom-2 font-bold text-3xl">
                 <IoMdAdd  />
             </Link>
         </div>

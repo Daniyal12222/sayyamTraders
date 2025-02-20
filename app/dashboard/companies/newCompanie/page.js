@@ -1,7 +1,9 @@
 "use client";
 import { HiArrowLeft } from "react-icons/hi";
+import { useRouter } from "next/navigation";
 
 export default function AddCompanies() {
+    const router = useRouter();
     return (
         <div className=" w-full h-[86vh] md:h-full flex justify-center  items-center">
             <div className="p-6 bg-white rounded-lg w-[100%] md:w-[50%] relative shadow-md">

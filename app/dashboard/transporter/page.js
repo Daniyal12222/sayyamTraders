@@ -5,8 +5,10 @@ import Link from "next/link";
 import Loader from "@/app/loader/page";
 import { useEffect, useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function Transporter() {
+    const router = useRouter();
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -57,7 +59,7 @@ export default function Transporter() {
                     </thead>
                     <tbody>
                         {/* rows */}
-                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                        <tr onClick={()=>{router.push("/dashboard/transporter/transporterN")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
                             <td className="px-3 py-2">02</td>
                             <td className="px-3 py-2">John Doe</td>
                             <td className="px-3 py-2">Jameel Ahmad</td>
@@ -66,7 +68,7 @@ export default function Transporter() {
                             <td className="px-3 py-2">100,775</td>
                             <td className="px-3 py-2">ABC</td>
                         </tr>
-                        <tr className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                        <tr onClick={()=>{router.push("/dashboard/transporter/transporterN")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
                             <td className="px-3 py-2">02</td>
                             <td className="px-3 py-2">John Doe</td>
                             <td className="px-3 py-2">Jameel Ahmad</td>
@@ -75,13 +77,32 @@ export default function Transporter() {
                             <td className="px-3 py-2">100,775</td>
                             <td className="px-3 py-2">ABC</td>
                         </tr>
+                        <tr onClick={()=>{router.push("/dashboard/transporter/transporterN")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                            <td className="px-3 py-2">02</td>
+                            <td className="px-3 py-2">John Doe</td>
+                            <td className="px-3 py-2">Jameel Ahmad</td>
+                            <td className="px-3 py-2">03462142135</td>
+                            <td className="px-3 py-2">88,345</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">ABC</td>
+                        </tr>
+                        <tr onClick={()=>{router.push("/dashboard/transporter/transporterN")}} className="border text-center px-3 py-4 bg-white text-neutral-600 h-[6vh]">
+                            <td className="px-3 py-2">02</td>
+                            <td className="px-3 py-2">John Doe</td>
+                            <td className="px-3 py-2">Jameel Ahmad</td>
+                            <td className="px-3 py-2">03462142135</td>
+                            <td className="px-3 py-2">88,345</td>
+                            <td className="px-3 py-2">100,775</td>
+                            <td className="px-3 py-2">ABC</td>
+                        </tr>
+                       
                         
                     </tbody>
 
                 </table>
 
             </div>
-            <Link href={"/dashboard/transporter/transporterN"} className=" w-16 h-16 md:w-[10vh] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center  bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-3xl" ><IoMdAdd  /> </Link>
+            <Link href={"/dashboard/transporter/newTransport"} className=" w-16 h-16 md:w-[10vh] md:h-[10vh] bg-yellow-500 rounded-full absolute flex justify-center items-center  bottom-20 right-1 md:right-7 md:bottom-2 font-bold text-3xl" ><IoMdAdd  /> </Link>
 
         </div>
     )
